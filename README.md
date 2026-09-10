@@ -21,17 +21,20 @@ All of it inside 15 pages, screens included.
 
 ## Page budget
 
-| Section | Pages |
-|---|---|
-| Cover + the short version | 1 |
-| The problem, what I'm assuming, what I'm optimising for | 1 |
-| The six stages and what ships first | 1 |
-| Technician's day, journey map | 2 |
-| Screens (15, at 4 per page) | 4 |
-| Technical write-up | 3 |
-| What the data is good for | 1 |
-| Plan, numbers, risks, what I'm not building | 1 |
-| **Total** | **14**, one page spare |
+Measured, not estimated. `submission/build.py` reports real page counts.
+
+| Section | Pages | State |
+|---|---|---|
+| Cover, the short version, problem and principles | 1 | to write |
+| The six stages and what ships first | 1 | to write |
+| A day with Ramesh (journey map) | 2 | **done** |
+| The screens (15, at 4 per page) | 4 | **done** |
+| How it works underneath (technical, 9 diagrams) | 5 | **done** |
+| What the data is good for | 1 | to write |
+| Plan, metrics, what we are not building | 1 | to write |
+| **Total** | **15** | at the limit |
+
+The technical section runs to 5 rather than 3 because it carries a diagram per point. That page came out of the journey map, which was 4 pages of flowing prose and is now 2 pages of timeline plus the six moments that matter. Tighter and better, not just shorter.
 
 ## Building it
 

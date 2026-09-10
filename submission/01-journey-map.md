@@ -1,244 +1,110 @@
 # A day with Ramesh
 
-### Sowing visit · Bhagwati Club, Ambegaon village · 20 farmers, no signal all day
+*Sowing visit · Bhagwati Club, Ambegaon village · 20 farmers, no signal all day*
 
-*This is the journey the brief asks for. I've written it as one real day rather than as a diagram, because the interesting parts are the small frictions, and diagrams hide those.*
+{{fig:the-day}}
 
 ---
 
-## The shape of the day
+## Six moments that decide whether the day works
 
-| Time | What's happening | Signal? |
+### 1 · The night before, 9:10 pm. The most important moment is not in the field.
+
+The app asks one thing while he is at home with his phone charging: *tomorrow is Bhagwati Club, 20 farmers, download now?* One tap, four minutes, done while he eats.
+
+**Why not the morning?** At 6:40am he wants to be on his bike, and a progress bar is something to skip. At 9pm he has nothing else to do. Same download, completely different chance of it happening. **If this did not happen, nothing else in this document matters**, so a missed download shows as a red screen in the morning, not a warning.
+
+In the morning he gets a verdict, not a checklist: **Ready. 20 farmers. Everything downloaded.**
+
+### 2 · 7:34 am. The plan is already wrong.
+
+Two minutes with Sarpanch Patil, who runs the club: three farmers have gone to the market, one has not sown at all, one has had a death in the family.
+
+He taps the three who are away. They drop to the bottom, the order reshuffles, thirty seconds.
+
+**I originally designed a clever route planner here and cut it.** The plan made at 9pm survives about four minutes of contact with the village. What he needs is not a better plan, it is **a plan that is cheap to change**. The club leader already knows who is home, so the app should ask him rather than out-guess him.
+
+### 3 · 7:43 am. One question, and most of the time one tap.
+
+Suresh Jadhav. Contract 2.4 acres, cotton, boundary walked on 12 November. The app asks him one thing, in words, big:
+
+> **Has Suresh sown the whole field?**   ·   **[ Yes, all of it ]**   **[ No, only part ]**
+
+Yes is one tap. Confirmed, saved, **twenty-five seconds**, no map and no walking.
+
+**This matters more than it looks.** Most farmers sow most of their field. If the common answer takes twenty-five seconds the day works; if it takes four minutes the day does not exist. Everything clever in this app is for the five farmers a day who need it. **Design for the boring answer.**
+
+### 4 · 7:46 am. He walks 92 metres, not 380.
+
+Suresh's answer is no. The eastern strip is dry, the borewell did not recharge in December.
+
+The outer boundary was walked in November and has not moved, so he does not re-walk it. He walks **only the line between sown and unsown**, and the app closes the shape against the boundary it already holds. Ninety seconds instead of eight minutes.
+
+One number stays large on screen as he walks: **1.8 acres sown, of 2.4 contracted, 75%**.
+
+He is not doing arithmetic next week in an office. He knows now, standing in the field, with Suresh next to him. That turns *"we will let you know"* into *"you have sown three quarters, Suresh, what happened to the east side?"*
+
+The gap is over 20%, so the app asks for a reason. Six icons, one tap: **no water**. Two photos, which carry their own time and place. Then he holds a button and says eight seconds of Marathi, because typing that sentence in the sun with a farmer waiting takes two minutes and would happen exactly once.
+
+### 5 · 7:52 am. The phone turns around.
+
+Suresh sees his own field, the shape and the number, in Marathi. He signs with his finger. A photo of him standing at his plot.
+
+**Sixty seconds, and here is what it buys.** The dispute does not happen today. It happens five months from now at settlement, with money on the table, when Suresh says that was never my land, and it is his word against a technician who has since visited four hundred farms. You lose that argument every time.
+
+The quieter effect is probably the bigger one: **if the farmer is watching, the capture cannot be faked.** That does more for honest data than any check I could build in software.
+
+Saved. *19 farmers left, about 3 hours.* **Total for a difficult farmer: 3 minutes 40 seconds.**
+
+### 6 · 8:34 pm, back on WiFi. The day goes home.
+
+Twenty captures, one tap. **Details go first, photos follow**, because photos are large and if a record needed its photos to count, one weak connection would hold up all twenty. *18 sent. 2 waiting for a better connection. Nothing is lost.*
+
+Then, while he still remembers: **3 need a note from you before the office can act.** Suresh's dry strip, the overlap at farmer 12, the over-planted plot at farmer 9. He writes them tonight, not next week, when the day has blurred into the other nineteen.
+
+And finally: *Tomorrow is Shivneri Club, 22 farmers. Download now?* The loop closes.
+
+---
+
+## Moving between twenty farmers
+
+The brief calls this a club visit, and the app should treat it as one thing rather than twenty unrelated ones.
+
+**Saving a farmer opens the next one.** He never returns to a home screen between captures. Twenty round trips through a menu is four or five minutes of the day spent navigating.
+
+**Flagged farmers come early in the order.** Anything carried over from last visit, or any plot the office has queried, is scheduled while there is still daylight and patience left, not at farm nineteen.
+
+**The day's common answer floats to the top.** When the borewells fail they fail for the whole village, so once three farmers have said *no water*, that becomes the first option in the picker rather than the fourth.
+
+**Progress is counted in farmers and hours, never percentages.** *16 farmers left, about 3 hours* tells him whether to speed up. A progress bar tells him nothing he can act on.
+
+**And the day ends with one number he can report.** *Bhagwati Club: 17 of 20 done, 81% of contracted area sown, 4 flagged.* That is exactly the unit his supervisor asks about, so he does not have to assemble it himself from twenty separate visits.
+
+---
+
+## When it goes wrong, which is five or six times a day
+
+| What happens | What the app does | The rule behind it |
 |---|---|---|
-| **Last night, 9:10 PM** | Phone downloads tomorrow | WiFi at home |
-| 6:40 AM | Leaves home | none |
-| 7:30 AM | Reaches Ambegaon, meets club leader | **None** |
-| 7:45 AM - 12:15 PM | Farmers 1-12 | **None** |
-| 12:15 - 1:00 PM | Rest. It's 38°C. | **None** |
-| 1:00 - 4:40 PM | Farmers 13-20 | **None** |
-| 5:30 PM | Home | Mobile data |
-| 8:30 PM | Evening sync, and tomorrow's download | WiFi |
-
-**The budget he's working inside:** ~6 hours of usable field time, minus roughly 2 hours of walking between farms, leaves about **11 minutes per farmer**, and that includes greeting him, asking after his family, the capture, and getting to the next field. The capture itself has to fit in **three minutes.** Every decision below is downstream of that number.
+| Farmer is at the market | Captures anyway, defers his confirmation. The club leader can witness instead | A missing person must never cost us the capture |
+| GPS weak at 14 m under a tree line | Saves it, marks it weak, tells him the office will check | Never block a man alone in a field with no signal |
+| Sown area is larger than the contract | Hard flag, photo required, input release pauses | The app records. It does not decide |
+| Plot overlaps the neighbour's | Both saved, neither deleted, sent to a supervisor | The app never judges a land dispute |
+| Battery at 18%, five farmers left | Satellite off, GPS checked less often. *"5 farmers left, about 25 minutes"* | Tell him in the only unit he thinks in |
+| Two crops on one plot | Mark two areas. Three or more, tap *this one is unusual* | A good escape hatch beats a bad automatic answer |
+| He mis-walks a corner | Undo the last point, or start again. Both one tap, both always visible | Mistakes are normal at farm 14 of 20 |
+| The app dies mid-walk | Every point is written as it is taken. Reopening asks *carry on with Anita's plot?* | Mid-range phones die. Losing his work must not follow |
 
 ---
 
-## Phase 1 · Last night, 9:10 PM (this is the important one)
+## What writing the day out hour by hour taught me
 
-He's at home. Phone is charging. The app pushes a quiet notification:
+**The most important moment of a field day is not in the field.** It is the download the night before, and everything else rests on it.
 
-> **Tomorrow: Bhagwati Club, Ambegaon. 20 farmers. Download now?**
+**Design for the boring answer.** Most farmers sow most of their field, and that path has to be twenty-five seconds.
 
-One tap. It downloads while he eats.
+**The plan is worth less than the ability to change it.** Any minute spent making the route smarter is worth less than a second spent making it easier to redo.
 
-**Why the night before, and not the morning?**
+**Never block him.** Weak GPS, missing farmer, dead battery, overlapping claim: in every case the app records honestly and lets him carry on. An app that says no, to a man alone in a field with thirteen farmers left, is an app that gets worked around. And a worked-around app produces data that is confidently wrong, which is worse than no data at all.
 
-Because at 6:40 AM he wants to be on his bike, and a progress bar is something to be skipped. At 9 PM he's sitting down with nothing to do and a good connection. Same download, entirely different chance of it actually happening.
-
-This is the single highest-leverage decision in the whole day. Everything that follows, the whole offline day, works only if this one thing happened. So it gets a notification, a badge on the app icon, and a red banner in the morning if it didn't.
-
-**What lands on the phone:** all 20 farmers, their contracts, the boundary walked at onboarding, everything captured since, any open flags from last visit, satellite pictures for Ambegaon only, and tomorrow's club as a spare.
-
-**In the morning he opens the app and sees one line:**
-
-> **Ready. 20 farmers. Everything downloaded.**
-
-That's all he needs. Not a checklist. A verdict.
-
-**If he skipped it:** a red screen, not a warning. *"You have not downloaded today. You will not be able to work in Ambegaon."* With a button to do it now over mobile data, and an honest estimate of how long that will take.
-
----
-
-## Phase 2 · 7:30 AM, arriving at the club
-
-He meets Sarpanch Patil, who runs the club. Two minutes of conversation, and the day he planned last night is already wrong:
-
-- Three farmers have gone to the weekly market
-- One hasn't sown at all yet, waiting for water
-- One had a death in the family
-
-**So the club screen's most important feature is not the route. It's being able to fix the plan in thirty seconds.**
-
-Tap the three absent farmers → *Not available today.* They drop to the bottom and get flagged for the next visit. The order re-shuffles. Done.
-
-**What I learned writing this:** I originally designed a clever route-planning screen. It's nearly useless. The plan made at 9 PM survives about four minutes of contact with the village. What the technician needs isn't a better plan. It's a plan that's **cheap to change.** So the route is a suggestion he can drag, not an instruction he has to follow.
-
-The club leader also turns out to be the most useful person in the system. He knows who's home, who's sown, who's in trouble. Worth designing around rather than ignoring.
-
----
-
-## Phase 3 · Farmer 1. The loop that repeats 20 times.
-
-**Suresh Jadhav. Contract: 2.4 acres. Cotton. Boundary walked 12 November.**
-
-He opens Suresh's card and sees the plot's whole life so far in one strip:
-
-> **Onboarding** ✓ 2.4 acres · 12 Nov
-> **Sowing** · today
-
-Then the app asks him one question, in words, big:
-
-> ### Has Suresh sown the whole field?
-> **[ Yes, all of it ]**  **[ No, only part ]**
-
-**If yes:** one tap. Confirmed, saved, done. **Twenty-five seconds.**
-
-This matters more than it looks. Most farmers sow most of their field. If the common case takes twenty-five seconds, the day works. If the common case takes four minutes, the day doesn't exist. **Design for the boring answer.**
-
-**Suresh's answer is no.** The eastern strip is dry. The borewell didn't recharge.
-
-### Marking what changed
-
-The field's outer boundary is already on the phone, walked in November, and it hasn't moved. So he doesn't re-walk it. He walks **only the line between sown and unsown**, about 90 metres instead of 380.
-
-He taps *Start walking*, walks the dividing line, taps *Done*. The app closes the shape against the boundary it already knows.
-
-**Ninety seconds instead of eight minutes.** This is the mechanic the whole product rests on: *you only ever walk the new edge.*
-
-As he walks, one number stays large on screen:
-
-> **1.8 acres sown**
-> *of 2.4 contracted · 75%*
-
-He's not doing arithmetic later. He knows now, standing in the field, with the farmer next to him. That changes the conversation from *"we'll let you know"* to *"you've sown three-quarters, Suresh, what happened to the east side?"*
-
-### The gap is 25%, so the app pushes back
-
-> **This is a big difference.**
-> Add a photo and tell us why.
-
-Not an error. Not a block. A request, with a reason.
-
-Reason is a picker: icons and words, six options: **no water · no seed · land dispute · kept for another crop · no labour · something else.** He taps *no water*. Two seconds.
-
-Two photos. They carry their own location and time, so nobody has to trust anybody later.
-
-Then he holds a button and says, in Marathi: *"Borewell failed in December, he says he'll sow if it rains by the 20th."* Eight seconds.
-
-**Not typed.** Typing that sentence, on a phone, in the sun, with a farmer waiting, takes two minutes and won't happen twice. It'll happen once, on the first day, and never again.
-
-### Suresh confirms it himself
-
-The screen turns to face him. His field, the shape, the number, in Marathi:
-
-> **तुमच्या शेतातील 1.8 एकर पेरणी झाली आहे**
-> *(1.8 acres of your field have been sown)*
-> Contract: 2.4 acres
-
-He signs with his finger. A photo of him at his plot.
-
-**Sixty seconds. Here's what it buys:**
-
-The dispute doesn't happen at capture time. It happens five months later at settlement, with money on the table, when Suresh says *"that was never my land."* At that point it's his word against a technician who has since visited four hundred other farms. You lose that argument every time.
-
-And the quieter effect, which is probably the bigger one: **if the farmer is watching, the capture can't be faked.** That does more for honest data than any check I could build in software.
-
-**Saved.** *"19 farmers left. About 3 hours."*
-
-**Total: 3 minutes 40 seconds.**
-
----
-
-## Phase 4 · What actually goes wrong
-
-Twenty farmers means the unusual case happens five or six times a day. It isn't unusual. It's the job.
-
-### Farmer 4 · nobody home
-
-Ganesh is at the market. But the field is right there and it doesn't need him.
-
-So: capture normally, and **defer the confirmation** rather than blocking it. Two ways out: the club leader witnesses it instead, or it goes to a *needs confirming* list that surfaces on the next visit.
-
-*The one thing the app must not do is throw the capture away because a person wasn't standing there.*
-
-### Farmer 7 · the phone can't find itself
-
-A line of big trees on the west edge, and cloud. Accuracy is 14 metres, well outside what a sowing visit needs.
-
-The app says, plainly:
-
-> **Location is weak here.** Saved anyway. The office will check this one.
-
-**It does not stop him.** He is standing in a field, with no signal, no supervisor to phone, and thirteen farmers left. If the app refuses his work he has no route forward, and I've just taught him that the app is an obstacle to be got around. He'll find a way around it, and everything he captures after that is worth less.
-
-Save it. Label it honestly. Let the office deal with it. **A record with a warning on it beats no record and a lost technician.**
-
-### Farmer 9 · sown *more* than the contract
-
-2.9 acres, against a 2.4 acre contract. That's not measurement noise, that's a question.
-
-Hard flag. Photo required. Input release held until someone in the office looks at it. Ramesh isn't asked to judge it. He's asked to record it and move on.
-
-### Farmer 12 · his plot overlaps his neighbour's
-
-Both plots are on the phone, so the app spots it on save: 0.3 acres claimed by two people.
-
-> **This overlaps with Bhau Shinde's plot.**
-> Marked for boundary check. Both are saved.
-
-And then **the app stops talking.**
-
-**This is the most important restraint in the design.** Two neighbours, a disputed strip, and a technician holding a phone. If the app asks him *"which one is correct?"*, it has just made a man with a smartphone the judge of a land dispute between two people who will still be neighbours in twenty years, and who will both blame him.
-
-That is not a software problem. It is a village problem, and it needs a person with authority, both parties, and probably a land record. The app's entire job here is to **notice it, record both claims, and escalate.** Nothing else.
-
-### Farmer 15 · 18% battery, five farmers left
-
-> **Battery saver on.** Satellite pictures off, location checked less often.
-> 5 farmers left, about 25 minutes.
-
-Not a warning. An adjustment, already made, with the consequence stated in the only unit he cares about: farmers remaining.
-
-### Farmer 17, two crops on one plot
-
-Real, and not rare. v1 lets him mark two areas with different crops. Three or more, and he taps *this one is unusual*: a note, photos, and someone looks at it later.
-
-**A good escape hatch beats a bad automatic answer.** Handling every possible field shape in v1 means shipping late and still missing one.
-
-### Farmer 20 · he makes a mistake
-
-He mis-walks a corner. Two ways back: undo the last point, or start over. Both one tap, both always visible.
-
-And if the app dies mid-walk, which happens on mid-range phones, every point is written down as it's taken. Reopening says: *"You were capturing Anita Pawar's plot. Carry on?"*
-
----
-
-## Phase 5 · 8:30 PM, back on WiFi
-
-Twenty captures waiting. He taps sync once.
-
-> **Sending 20 visits.**
-> Details first. Photos take longer.
-
-**Details before photos, deliberately.** Photos are large and slow. If the record can't be complete until the photo arrives, one weak connection blocks twenty visits. So each visit is complete and usable the moment the details land, and the photos catch up behind it, on their own, whenever there's signal.
-
-> **18 sent. 2 waiting for a better connection.**
-> Nothing is lost. They'll go on their own.
-
-Then, while he still remembers:
-
-> **3 need a note from you before the office can act.**
-
-Suresh's dry strip, the overlap at Farmer 12, the over-planted plot at Farmer 9. He adds a line to each. **Tonight**, not next week, when the day has blurred into the other nineteen.
-
-And finally:
-
-> **Tomorrow: Shivneri Club, 22 farmers. Download now?**
-
-The loop closes. Tomorrow is already ready.
-
----
-
-## What the day taught me
-
-Five things I only saw by writing it out hour by hour:
-
-**1. The most important moment of the field day happens the night before.** It isn't in the field at all. If the download didn't happen, nothing else in this document matters.
-
-**2. Design for the boring answer.** Most farmers sow most of their field. That path is twenty-five seconds. The clever features are for the five cases that need them.
-
-**3. The plan is worth less than the ability to change it.** Three farmers were at the market. Any minute spent making the route smarter is worth less than a second spent making it easier to redo.
-
-**4. Never block him.** Weak GPS, missing farmer, dead battery, overlap: in every case the app records honestly and lets him continue. An app that says no, to a man alone in a field with no signal and thirteen farmers left, is an app that gets worked around. And a worked-around app produces data that is confidently wrong, which is worse than no data at all.
-
-**5. Know where the app's authority ends.** It can measure a field. It cannot settle who owns it. Confusing those two is how you get a technician blamed for a land dispute, and how you lose him.
+**Know where the app's authority ends.** It can measure a field. It cannot settle who owns it. Confusing those two is how a technician gets blamed for a land dispute, and how you lose him.
