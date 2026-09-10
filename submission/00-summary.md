@@ -47,4 +47,6 @@ Not as a target. As the constraint that decides what gets built. Anything that d
 | **What the data is worth after the visit** · seven uses of the same record | 13 |
 | **What I would build first** · the plan, the numbers, and how technicians get paid | 14 |
 
-Fifteen decisions sit behind this, each with the options weighed and **what the choice cost.** They are in a separate decision log alongside this document.
+**Fifteen decisions sit behind this, each recorded with what it cost.** Three of them shape everything else.
+
+**Walk the boundary properly once, then only ever mark what changed**, because walking it at every visit does not fit in the day, and what does not fit gets faked. **Never block a capture**, because an app that says no to a man alone in a field with no signal is an app that gets worked around. And **pay technicians on how the record was made, not on how clean it comes back**, because paying for captures with no flags pays a man to hide problems.

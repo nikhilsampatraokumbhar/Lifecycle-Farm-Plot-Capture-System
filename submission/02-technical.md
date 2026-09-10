@@ -16,7 +16,15 @@
 
 ---
 
-## 2. When two technicians capture the same plot
+## 2. What goes on the phone before he leaves
+
+{{fig:preload}}
+
+Today's club and tomorrow's: farmers, contracts, plots, every boundary and capture, open flags, photo thumbnails, and satellite pictures for those two villages only. Villages are kept seven days then cleared, so about 150 MB is in use at a time. *Real tile sizes and phone storage are the first two numbers I would check on day one.*
+
+---
+
+## 3. When two technicians capture the same plot
 
 Technicians often visit clubs together, so this happens most weeks. **It is not a merging problem, and treating it as one is the mistake.** So: **keep both, pick neither, ask a person.** The usual shortcut, "whichever synced last wins", really means "whoever reached WiFi first is right".
 
@@ -26,9 +34,7 @@ Technicians often visit clubs together, so this happens most weeks. **It is not 
 
 ---
 
-## 3. How accurate is accurate enough
-
-**Most people get this wrong: the same GPS error is far more damaging on a small plot than a big one.**
+## 4. How accurate is accurate enough
 
 {{fig:accuracy}}
 
@@ -49,25 +55,23 @@ Real error is smaller than the band shown, because errors partly cancel, but the
 
 ---
 
-## 4. Catching things that look wrong
+## 5. Catching things that look wrong
 
 {{fig:checks}}
 
 ---
 
-## 5. What satellite pictures can and cannot do
-
-Being precise here is worth more than being enthusiastic.
+## 6. What satellite pictures can and cannot do
 
 {{fig:satellite}}
 
-So it does three things: tells you **whether the field is a field**, which catches fabrication; tells you **when a crop actually started growing**, the strongest use by a distance; and shows **when part of a field is doing worse than the rest**, as supporting evidence rather than proof.
+Being precise here is worth more than being enthusiastic, so it does three things: tells you **whether the field is a field**, which catches fabrication; tells you **when a crop actually started growing**, the strongest use by a distance; and shows **when part of a field is doing worse than the rest**, as supporting evidence rather than proof.
 
 **The limit that decides how we use it is cloud.** In monsoon you may get one usable picture in three weeks, so it never gates anything. It runs weekly on the server, produces a "worth a look" list, and never appears in the field app.
 
 ---
 
-## 6. Overlapping claims, and sudden changes in area
+## 7. Overlapping claims, and sudden changes in area
 
 {{fig:disputes}}
 
@@ -77,7 +81,7 @@ So it does three things: tells you **whether the field is a field**, which catch
 
 ---
 
-## 7. How the data is organised
+## 8. How the data is organised
 
 **Farmer** belongs to a **Club**, which is a real record with its own village, members and visit history. **Plot** belongs to a farmer and has an ID that never changes. **Capture** belongs to a plot, is written once, and is never edited.
 
@@ -89,9 +93,9 @@ Each capture carries its plot and stage, the shape and area, when and by whom an
 
 ---
 
-## 8. Planning the month, not the day
+## 9. Planning the month, not the day
 
-**The routing problem is not the one it looks like.** 200 farmers twice a month sounds like a hard daily route across 200 scattered farms. It is not, because of the clubs: 200 farmers in clubs of 20 is **ten clubs**, and twice a month is **twenty club-days**, which is the whole working month.
+**The routing problem is not the one it looks like.** 200 farmers twice a month sounds like a hard daily route across 200 scattered farms. It is not: 200 farmers in clubs of 20 is **ten clubs**, and twice a month is **twenty club-days**, which is the whole working month.
 
 {{fig:month}}
 
@@ -106,13 +110,3 @@ So the app offers a sensible default order and makes it take thirty seconds to c
 | Optimising the order of the farms | About 10 minutes |
 
 **The most obvious feature is the least valuable one on the list.**
-
----
-
-## 9. What goes on the phone before he leaves
-
-Today's club and tomorrow's: farmers, contracts, plots, every saved boundary and capture, open flags, photo thumbnails, and satellite pictures for those two villages only. Villages are kept seven days then cleared, so about 150 MB is in use at a time.
-
-{{fig:preload}}
-
-*Sizes are estimates. Real tile sizes and phone storage are the first two numbers I would check on day one.*
