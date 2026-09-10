@@ -1,0 +1,806 @@
+<title>Plot Capture — Screens</title>
+<style>
+:root{
+  --ink:#141613; --ink2:#5B6159; --ink3:#8A9086;
+  --line:#E2E5DE; --line2:#CDD2C7;
+  --paper:#FFFFFF; --page:#F2F1EC;
+  --green:#0E6B3C; --green-d:#0A4F2C; --green-l:#E4F2E9;
+  --amber:#9A5B06; --amber-l:#FDF1DC;
+  --red:#A4231D; --red-l:#FBE7E5;
+  --blue:#1F5673; --blue-l:#E5EEF3;
+  --soil:#4A4632; --soil2:#5E5A40; --crop:#3E5C2A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);
+  font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased}
+
+/* ---------- page furniture ---------- */
+.wrap{max-width:1180px;margin:0 auto;padding:40px 20px 80px}
+.doc-head{border-bottom:2px solid var(--ink);padding-bottom:18px;margin-bottom:8px}
+.doc-head h1{font-size:26px;margin:0 0 6px;letter-spacing:-.02em}
+.doc-head p{margin:0;color:var(--ink2);max-width:70ch}
+.legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:18px 0 34px;padding:14px 16px;
+  background:var(--paper);border:1px solid var(--line);border-radius:8px}
+.legend b{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3);
+  width:100%;margin-bottom:2px}
+.legend span{font-size:12.5px;color:var(--ink2)}
+.legend span i{font-style:normal;font-weight:700;color:var(--ink)}
+
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:38px 34px}
+.cell{break-inside:avoid}
+.cap{margin-top:14px}
+.cap .n{font-size:11px;font-weight:700;letter-spacing:.1em;color:var(--green);
+  text-transform:uppercase;display:block;margin-bottom:3px}
+.cap h3{font-size:15px;margin:0 0 6px;letter-spacing:-.01em}
+.cap p{margin:0;font-size:12.5px;line-height:1.55;color:var(--ink2)}
+.cap p b{color:var(--ink)}
+
+/* ---------- phone ---------- */
+.phone{width:330px;margin:0 auto;background:#1A1C19;border-radius:26px;padding:8px;
+  box-shadow:0 1px 2px rgba(0,0,0,.14),0 10px 26px rgba(20,22,19,.16)}
+.screen{background:var(--paper);border-radius:19px;overflow:hidden;height:640px;
+  display:flex;flex-direction:column;position:relative}
+
+.sysbar{display:flex;justify-content:space-between;align-items:center;
+  padding:7px 14px 5px;font-size:10.5px;font-weight:600;color:var(--ink2);
+  background:var(--paper);letter-spacing:.02em;flex:none}
+.sysbar .r{display:flex;gap:7px;align-items:center}
+.nosig{color:var(--amber);font-weight:700}
+.batt{display:inline-flex;align-items:center;gap:3px}
+.batt .b{width:17px;height:9px;border:1.3px solid var(--ink2);border-radius:2px;
+  position:relative;display:inline-block}
+.batt .b::after{content:"";position:absolute;right:-3px;top:2.5px;width:1.8px;height:4px;
+  background:var(--ink2);border-radius:0 1px 1px 0}
+.batt .b i{position:absolute;left:1.2px;top:1.2px;bottom:1.2px;background:var(--ink2);
+  border-radius:1px;display:block}
+.batt.low .b,.batt.low .b::after{border-color:var(--red);background:var(--red)}
+.batt.low .b i{background:var(--red)}
+.batt.low .b{background:none}
+
+.appbar{display:flex;align-items:center;gap:10px;padding:9px 14px 11px;
+  border-bottom:1px solid var(--line);flex:none}
+.appbar .back{font-size:17px;color:var(--ink2);line-height:1}
+.appbar h4{font-size:14.5px;margin:0;font-weight:700;letter-spacing:-.01em}
+.appbar .sub{font-size:11px;color:var(--ink3);margin-top:1px}
+.appbar .right{margin-left:auto;font-size:11px;font-weight:700;color:var(--green)}
+
+.body{flex:1;overflow:hidden;padding:14px}
+.body.flush{padding:0}
+.foot{flex:none;padding:11px 14px 14px;border-top:1px solid var(--line);background:var(--paper)}
+
+/* ---------- controls ---------- */
+.btn{display:block;width:100%;text-align:center;padding:14px;border-radius:10px;
+  font-size:15px;font-weight:700;letter-spacing:-.01em;border:none}
+.btn.p{background:var(--green);color:#fff}
+.btn.d{background:var(--red);color:#fff}
+.btn.s{background:var(--paper);color:var(--ink);border:1.6px solid var(--line2)}
+.btn.g{background:#EFEFEA;color:var(--ink2)}
+.btn.sm{padding:11px;font-size:13.5px}
+.btn2{display:flex;gap:9px}
+.btn2 .btn{flex:1}
+
+.chip{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:700;
+  padding:3px 8px;border-radius:20px;letter-spacing:.01em}
+.chip.ok{background:var(--green-l);color:var(--green-d)}
+.chip.warn{background:var(--amber-l);color:var(--amber)}
+.chip.bad{background:var(--red-l);color:var(--red)}
+.chip.info{background:var(--blue-l);color:var(--blue)}
+.chip.mute{background:#EFEFEA;color:var(--ink2)}
+
+.big{font-size:40px;font-weight:800;letter-spacing:-.035em;line-height:1;color:var(--ink)}
+.big .u{font-size:17px;font-weight:700;letter-spacing:-.01em;color:var(--ink2)}
+.q{font-size:19px;font-weight:700;line-height:1.3;letter-spacing:-.02em}
+.lbl{font-size:10.5px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--ink3)}
+
+.card{border:1px solid var(--line);border-radius:11px;padding:12px;background:var(--paper)}
+.card+.card{margin-top:9px}
+.card.hi{border-color:var(--green);border-width:1.6px;background:var(--green-l)}
+.card.warn{border-color:#E8C98F;background:var(--amber-l)}
+.card.bad{border-color:#E9B2AE;background:var(--red-l)}
+
+.banner{padding:11px 12px;border-radius:9px;font-size:12.5px;line-height:1.45}
+.banner b{display:block;font-size:13.5px;margin-bottom:2px}
+.banner.warn{background:var(--amber-l);color:var(--amber);border:1px solid #EFD5A3}
+.banner.bad{background:var(--red-l);color:var(--red);border:1px solid #EFC0BC}
+.banner.ok{background:var(--green-l);color:var(--green-d);border:1px solid #B9DCC7}
+.banner.info{background:var(--blue-l);color:var(--blue);border:1px solid #C2D8E4}
+
+.row{display:flex;align-items:center;gap:10px}
+.row.sb{justify-content:space-between}
+.sep{height:1px;background:var(--line);margin:11px 0}
+
+.ava{width:34px;height:34px;border-radius:50%;background:#E7E9E3;color:var(--ink2);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex:none}
+.ava.g{background:var(--green-l);color:var(--green-d)}
+.ava.a{background:var(--amber-l);color:var(--amber)}
+.ava.r{background:var(--red-l);color:var(--red)}
+
+.bar{height:6px;border-radius:3px;background:#E7E9E3;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--green);border-radius:3px}
+.bar.amber i{background:var(--amber)}
+
+/* ---------- map ---------- */
+.map{position:relative;background:
+    repeating-linear-gradient(66deg, rgba(0,0,0,.09) 0 2px, transparent 2px 9px),
+    repeating-linear-gradient(156deg, rgba(255,255,255,.05) 0 1px, transparent 1px 14px),
+    radial-gradient(ellipse at 22% 28%, #5A5A3C 0 28%, transparent 62%),
+    radial-gradient(ellipse at 78% 72%, #3F5330 0 26%, transparent 60%),
+    linear-gradient(148deg,#514D36 0%,#46512F 48%,#3C4A2A 100%);
+  overflow:hidden}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+.mtag{position:absolute;font-size:10px;font-weight:700;padding:3px 7px;border-radius:5px;
+  background:rgba(255,255,255,.94);color:var(--ink);letter-spacing:-.01em;
+  box-shadow:0 1px 3px rgba(0,0,0,.3)}
+.mtag.d{background:rgba(20,22,19,.82);color:#fff}
+.gps{position:absolute;left:10px;top:10px;display:flex;align-items:center;gap:6px;
+  background:rgba(255,255,255,.95);padding:5px 9px;border-radius:20px;font-size:10.5px;font-weight:700;
+  box-shadow:0 1px 4px rgba(0,0,0,.28)}
+.gps .dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+.gps.warn .dot{background:var(--amber)} .gps.warn{color:var(--amber)}
+.gps.bad .dot{background:var(--red)} .gps.bad{color:var(--red)}
+.hud{position:absolute;left:10px;right:10px;bottom:10px;background:rgba(255,255,255,.97);
+  border-radius:10px;padding:10px 12px;box-shadow:0 2px 10px rgba(0,0,0,.28)}
+
+.km{display:flex;gap:12px;font-size:10.5px;font-weight:700;color:var(--ink2);margin-top:8px}
+.km i{width:11px;height:11px;border-radius:2.5px;display:inline-block;margin-right:4px;
+  vertical-align:-1px}
+
+/* ---------- print ---------- */
+@page{size:A4;margin:9mm 8mm}
+@media print{
+  body{background:#fff;font-size:12px}
+  .wrap{max-width:none;padding:0}
+  .doc-head{padding-bottom:11px;margin-bottom:6px}
+  .doc-head h1{font-size:19px} .doc-head p{font-size:11px}
+  .legend{margin:10px 0 14px;padding:9px 11px;gap:4px 14px}
+  .legend b{font-size:9px;margin-bottom:0}
+  .legend span{font-size:10px}
+  .grid{display:block;font-size:0}
+  .cell{display:inline-block;width:49.6%;vertical-align:top;font-size:12px;padding:0 6px}
+  .phone{transform:scale(.56);transform-origin:top center;
+    margin-bottom:-289px;box-shadow:none;border:1px solid #2A2C29}
+  .cap{margin-top:6px;padding:0 4px}
+  .cap .n{font-size:8.5px;margin-bottom:2px}
+  .cap h3{font-size:12px;margin-bottom:4px}
+  .cap p{font-size:9.6px;line-height:1.48}
+  .cell{break-inside:avoid;page-break-inside:avoid}
+  .noprint{display:none}
+}
+</style>
+
+<div class="wrap">
+<div class="doc-head">
+  <h1>The screens</h1>
+  <p>Fourteen screens covering one sowing visit, end to end — from the download the night before to the sync
+  that evening. Each one is annotated with the field problem it exists to solve, because a screen that
+  doesn't solve a field problem shouldn't be in the app.</p>
+</div>
+
+<div class="legend">
+  <b>Four rules every screen follows</b>
+  <span><i>One question per screen.</i> He's standing in a field with a farmer waiting. Two questions is one too many.</span>
+  <span><i>The number that matters is the biggest thing on screen.</i> Area, in acres, always.</span>
+  <span><i>The main action sits at the bottom.</i> One-handed, thumb reach, often while holding something else.</span>
+  <span><i>High contrast, heavy type.</i> This is read at 38°C in direct sun, on a scratched screen.</span>
+</div>
+
+<div class="grid">
+
+<!-- ============ 1 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>21:10</span>
+    <span class="r"><span>WiFi</span><span class="batt"><span class="b"><i style="width:9.5px"></i></span>64%</span></span></div>
+  <div class="appbar"><div><h4>Tomorrow</h4><div class="sub">Thursday, 14 December</div></div></div>
+  <div class="body">
+    <div class="card hi">
+      <div class="lbl" style="color:var(--green-d)">Tomorrow you visit</div>
+      <div style="font-size:19px;font-weight:800;letter-spacing:-.02em;margin:5px 0 3px">Bhagwati Club</div>
+      <div style="font-size:13px;color:var(--ink2)">Ambegaon · 20 farmers · Sowing visit</div>
+      <div class="row" style="margin-top:9px;gap:6px"><span class="chip mute">28 km</span><span class="chip mute">No network there</span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="lbl">What goes on your phone</div>
+    <div style="margin-top:9px">
+      <div class="row" style="margin-bottom:8px"><span style="color:var(--green);font-weight:800">✓</span>
+        <span style="font-size:13px">All 20 farmers and their contracts</span></div>
+      <div class="row" style="margin-bottom:8px"><span style="color:var(--green);font-weight:800">✓</span>
+        <span style="font-size:13px">Boundaries walked at onboarding</span></div>
+      <div class="row" style="margin-bottom:8px"><span style="color:var(--green);font-weight:800">✓</span>
+        <span style="font-size:13px">Satellite pictures for Ambegaon</span></div>
+      <div class="row" style="margin-bottom:8px"><span style="color:var(--green);font-weight:800">✓</span>
+        <span style="font-size:13px">4 things flagged last visit</span></div>
+      <div class="row"><span style="color:var(--ink3);font-weight:800">+</span>
+        <span style="font-size:13px;color:var(--ink2)">Friday's club, as a spare</span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="banner info"><b>Do this tonight.</b>In the morning you will want to leave, not wait.</div>
+  </div>
+  <div class="foot"><button class="btn p">Download — about 4 minutes</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 1 · 9:10 pm, at home</span>
+<h3>Tomorrow gets downloaded tonight</h3>
+<p>The most important moment of a field day <b>doesn't happen in the field.</b> At 6:40am he wants to be on his bike and a progress bar is something to skip. At 9pm he's at home with his phone charging and nothing to do. Same download, completely different chance of it happening — and if it doesn't, none of the other thirteen screens matter.</p></div>
+</div>
+
+<!-- ============ 2 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>06:38</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:14px"></i></span>96%</span></span></div>
+  <div class="appbar"><div><h4>Today</h4><div class="sub">Thursday, 14 December</div></div>
+    <div class="right">Ramesh K.</div></div>
+  <div class="body">
+    <div class="banner ok" style="margin-bottom:12px"><b>Ready. Everything downloaded.</b>You can work all day without network.</div>
+    <div class="card">
+      <div class="row sb"><div>
+        <div style="font-size:18px;font-weight:800;letter-spacing:-.02em">Bhagwati Club</div>
+        <div style="font-size:12.5px;color:var(--ink2);margin-top:2px">Ambegaon village</div>
+      </div><span class="chip ok">Sowing</span></div>
+      <div class="sep"></div>
+      <div class="row sb">
+        <div><div class="big" style="font-size:30px">20</div><div class="lbl" style="margin-top:3px">Farmers</div></div>
+        <div><div class="big" style="font-size:30px">4</div><div class="lbl" style="margin-top:3px">Flagged</div></div>
+        <div><div class="big" style="font-size:30px">28<span class="u">km</span></div><div class="lbl" style="margin-top:3px">Away</div></div>
+      </div>
+    </div>
+    <div class="card" style="opacity:.6">
+      <div class="row sb"><div style="font-size:14px;font-weight:700">Shivneri Club</div>
+        <span class="chip mute">Tomorrow</span></div>
+      <div style="font-size:12px;color:var(--ink2);margin-top:3px">Kondhwa · 22 farmers · already downloaded</div>
+    </div>
+    <div class="sep"></div>
+    <div class="row sb"><span class="lbl">Battery needed today</span>
+      <span style="font-size:12.5px;font-weight:700;color:var(--green)">About 40% — you have 96%</span></div>
+  </div>
+  <div class="foot"><button class="btn p">Start the day</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 2 · 6:38 am, leaving</span>
+<h3>A verdict, not a checklist</h3>
+<p>He gets one line: <b>Ready.</b> Not a list of eleven things to inspect. If the download failed this screen is red and blocks the day instead — because finding out in Ambegaon, 28km from signal, costs him the whole day. The battery line is there because a dead phone at farmer 15 is a real and frequent way to lose an afternoon.</p></div>
+</div>
+
+<!-- ============ 3 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:34</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:13px"></i></span>91%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Bhagwati Club</h4><div class="sub">Ambegaon · Sowing visit</div></div>
+    <div class="right">0 / 20</div></div>
+  <div class="body" style="padding:12px 14px">
+    <div class="banner info" style="margin-bottom:11px;padding:9px 11px">
+      <b>Ask Sarpanch Patil who is here today.</b>Tap anyone who isn't — the order fixes itself.</div>
+    <div class="row sb" style="margin-bottom:9px">
+      <span class="lbl">Suggested order</span><span style="font-size:11.5px;font-weight:700;color:var(--green)">Drag to change</span></div>
+    <div style="border:1px solid var(--line);border-radius:11px;overflow:hidden">
+      <div class="row" style="padding:9px 11px;border-bottom:1px solid var(--line)">
+        <span class="ava g">1</span><div style="flex:1">
+        <div style="font-size:13.5px;font-weight:700">Suresh Jadhav</div>
+        <div style="font-size:11.5px;color:var(--ink2)">2.4 acres · Cotton</div></div>
+        <span class="chip mute">≡</span></div>
+      <div class="row" style="padding:9px 11px;border-bottom:1px solid var(--line)">
+        <span class="ava g">2</span><div style="flex:1">
+        <div style="font-size:13.5px;font-weight:700">Anita Pawar</div>
+        <div style="font-size:11.5px;color:var(--ink2)">1.6 acres · Cotton</div></div>
+        <span class="chip mute">≡</span></div>
+      <div class="row" style="padding:9px 11px;border-bottom:1px solid var(--line);background:var(--amber-l)">
+        <span class="ava a">3</span><div style="flex:1">
+        <div style="font-size:13.5px;font-weight:700">Bhau Shinde</div>
+        <div style="font-size:11.5px;color:var(--amber);font-weight:600">Boundary query from last visit</div></div>
+        <span class="chip warn">Flagged</span></div>
+      <div class="row" style="padding:9px 11px;border-bottom:1px solid var(--line);opacity:.5">
+        <span class="ava">—</span><div style="flex:1">
+        <div style="font-size:13.5px;font-weight:700;text-decoration:line-through">Ganesh More</div>
+        <div style="font-size:11.5px;color:var(--ink2)">Gone to market</div></div>
+        <span class="chip mute">Moved</span></div>
+      <div class="row" style="padding:9px 11px;opacity:.5">
+        <span class="ava">—</span><div style="flex:1">
+        <div style="font-size:13.5px;font-weight:700;text-decoration:line-through">Kavita Bhosale</div>
+        <div style="font-size:11.5px;color:var(--ink2)">Not sown yet — no water</div></div>
+        <span class="chip mute">Moved</span></div>
+    </div>
+    <div style="text-align:center;font-size:11.5px;color:var(--ink3);margin-top:9px">15 more below</div>
+  </div>
+  <div class="foot"><button class="btn p">Start with Suresh Jadhav</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 3 · 7:34 am, at the club</span>
+<h3>The plan is worth less than the ability to change it</h3>
+<p>The order set last night is already wrong — two farmers are at the market, one hasn't sown. So this screen isn't a route, it's <b>a plan that costs thirty seconds to redo.</b> I originally designed a clever route optimiser here and cut it: any minute spent making the plan smarter is worth less than a second spent making it easier to fix. The club leader knows who's home — the app should ask him, not out-guess him.</p></div>
+</div>
+
+<!-- ============ 4 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:41</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:13px"></i></span>90%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Suresh Jadhav</h4><div class="sub">Bhagwati Club · Plot 1 of 1</div></div></div>
+  <div class="body" style="padding:0">
+    <div class="map" style="height:150px">
+      <svg viewBox="0 0 300 150" preserveAspectRatio="none">
+        <polygon points="42,24 176,16 246,54 232,122 96,134 50,88"
+          fill="rgba(255,255,255,.13)" stroke="#fff" stroke-width="2.5"/>
+      </svg>
+      <span class="mtag" style="left:12px;bottom:12px">Contracted · 2.4 acres</span>
+    </div>
+    <div style="padding:13px 14px">
+      <div class="row sb" style="margin-bottom:11px">
+        <div><div class="lbl">Contract</div>
+        <div style="font-size:15px;font-weight:700;margin-top:2px">2.4 acres · Cotton</div></div>
+        <span class="chip ok">Active</span></div>
+      <div class="lbl" style="margin-bottom:8px">This plot so far</div>
+      <div class="card" style="padding:10px 11px">
+        <div class="row" style="margin-bottom:9px"><span class="ava g" style="width:26px;height:26px;font-size:12px">✓</span>
+          <div style="flex:1"><div style="font-size:13px;font-weight:700">Onboarding</div>
+          <div style="font-size:11.5px;color:var(--ink2)">2.4 acres · walked · 12 Nov</div></div></div>
+        <div class="row" style="margin-bottom:9px"><span class="ava a" style="width:26px;height:26px;font-size:12px">2</span>
+          <div style="flex:1"><div style="font-size:13px;font-weight:700">Sowing</div>
+          <div style="font-size:11.5px;color:var(--amber);font-weight:600">Due today</div></div></div>
+        <div class="row" style="opacity:.42"><span class="ava" style="width:26px;height:26px;font-size:12px">3</span>
+          <div style="flex:1"><div style="font-size:13px;font-weight:700">Germination</div>
+          <div style="font-size:11.5px;color:var(--ink2)">Around 5 Jan</div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><button class="btn p">Start sowing visit</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 4 · The plot's life so far</span>
+<h3>A plot is not a shape. It's a shape with a history.</h3>
+<p>This screen is the whole data model made visible. Every visit adds a record and <b>nothing is ever overwritten</b> — which is what makes comparison, disputes, settlement and insurance claims all answerable later from the same one place. He can also see what's coming, so a farmer asking "when will you be back?" gets a real answer.</p></div>
+</div>
+
+<!-- ============ 5 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:43</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:13px"></i></span>90%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Sowing visit</h4><div class="sub">Suresh Jadhav · 2.4 acres</div></div>
+    <span class="chip ok" style="margin-left:auto">Ready offline</span></div>
+  <div class="body" style="padding:0">
+    <div class="map" style="height:132px">
+      <svg viewBox="0 0 300 132" preserveAspectRatio="none">
+        <polygon points="42,21 176,14 246,48 232,108 96,118 50,78"
+          fill="rgba(255,255,255,.12)" stroke="#fff" stroke-width="2.5" stroke-dasharray="7 4"/>
+      </svg>
+      <span class="mtag" style="left:12px;bottom:11px">Walked 12 Nov · 2.4 acres</span>
+    </div>
+    <div style="padding:18px 16px 0">
+      <div class="q" style="text-align:center;margin-bottom:5px">Has Suresh sown<br>the whole field?</div>
+      <div style="text-align:center;font-size:12.5px;color:var(--ink2);margin-bottom:18px">
+        The boundary is already saved. You only mark what changed.</div>
+      <button class="btn p" style="padding:17px;font-size:16px;margin-bottom:10px">Yes — all of it</button>
+      <button class="btn s" style="padding:17px;font-size:16px;margin-bottom:10px">No — only part of it</button>
+      <button class="btn g" style="padding:13px;font-size:13.5px">He hasn't sown anything yet</button>
+      <div class="sep" style="margin:14px 0 10px"></div>
+      <div class="row" style="gap:8px;font-size:11.5px;color:var(--ink2);line-height:1.4">
+        <span style="color:var(--green);font-weight:800;font-size:14px">✓</span>
+        <span>Everything you need is already on this phone. No network required.</span></div>
+    </div>
+  </div>
+  <div class="foot" style="border:none;padding-top:0">
+    <div style="text-align:center;font-size:11.5px;color:var(--ink3)">Farmer 1 of 17 today</div></div>
+</div></div>
+<div class="cap"><span class="n">Screen 5 · The screen that decides whether the day works</span>
+<h3>Design for the boring answer</h3>
+<p>Most farmers sow most of their field. That answer is <b>one tap and twenty-five seconds</b> — no map, no walking, no typing. Everything clever in this app is for the five farmers a day who need it. If the common case took four minutes instead, twenty farmers wouldn't fit in a day and the whole thing collapses. One question, two buttons, both reachable with a thumb.</p></div>
+</div>
+
+<!-- ============ 6 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:46</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:12.5px"></i></span>89%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Walking the edge</h4><div class="sub">Where sown meets unsown</div></div></div>
+  <div class="body flush" style="position:relative">
+    <div class="map" style="height:100%">
+      <svg viewBox="0 0 300 470" preserveAspectRatio="none">
+        <polygon points="42,60 176,42 246,140 232,318 96,350 50,228"
+          fill="none" stroke="#fff" stroke-width="2.5" stroke-dasharray="7 4"/>
+        <polygon points="42,60 176,42 206,84 190,332 96,350 50,228"
+          fill="rgba(56,200,120,.34)" stroke="none"/>
+        <polyline points="206,84 199,150 195,225 190,332"
+          fill="none" stroke="#3BE08A" stroke-width="4.5" stroke-linecap="round"/>
+        <circle cx="206" cy="84" r="5.5" fill="#3BE08A" stroke="#0B3D22" stroke-width="2"/>
+        <circle cx="190" cy="332" r="9" fill="#3BE08A" stroke="#fff" stroke-width="3"/>
+      </svg>
+      <div class="gps"><span class="dot"></span>GPS good · 4 m</div>
+      <span class="mtag" style="left:12px;top:44px">Sown</span>
+      <span class="mtag d" style="right:12px;top:120px">Not sown</span>
+      <div class="hud">
+        <div class="row sb">
+          <div><div class="big">1.8<span class="u"> acres</span></div>
+            <div style="font-size:11.5px;color:var(--ink2);margin-top:3px">of 2.4 contracted · <b>75%</b></div></div>
+          <div style="text-align:right"><div class="lbl">Walked</div>
+            <div style="font-size:15px;font-weight:800;margin-top:2px">92 m</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div class="btn2">
+    <button class="btn s sm" style="flex:0 0 96px">Undo</button>
+    <button class="btn p sm">Done</button></div></div>
+</div></div>
+<div class="cap"><span class="n">Screen 6 · Walking, 90 seconds</span>
+<h3>He walks 92 metres, not 380</h3>
+<p>The outer boundary was walked in November and hasn't moved. So he walks <b>only the line between sown and unsown</b> — the app closes the shape against the boundary it already has. Ninety seconds instead of eight minutes, which is the difference between twenty farmers fitting in a day and not. The acreage updates as he walks, so the conversation with Suresh happens <b>now</b>, in the field, not in an office next week.</p></div>
+</div>
+
+<!-- ============ 7 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:48</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:12.5px"></i></span>89%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Adjust by hand</h4><div class="sub">Drag the dots to fix</div></div>
+    <span class="chip info" style="margin-left:auto">Satellite</span></div>
+  <div class="body flush">
+    <div class="map" style="height:100%">
+      <svg viewBox="0 0 300 470" preserveAspectRatio="none">
+        <polygon points="42,60 176,42 246,140 232,318 96,350 50,228"
+          fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="6 4" opacity=".6"/>
+        <polygon points="42,60 176,42 206,84 190,332 96,350 50,228"
+          fill="rgba(56,200,120,.3)" stroke="#3BE08A" stroke-width="3"/>
+        <circle cx="42" cy="60" r="7" fill="#fff" stroke="#0B3D22" stroke-width="2.5"/>
+        <circle cx="176" cy="42" r="7" fill="#fff" stroke="#0B3D22" stroke-width="2.5"/>
+        <circle cx="206" cy="84" r="10" fill="#3BE08A" stroke="#fff" stroke-width="3"/>
+        <circle cx="190" cy="332" r="7" fill="#fff" stroke="#0B3D22" stroke-width="2.5"/>
+        <circle cx="96" cy="350" r="7" fill="#fff" stroke="#0B3D22" stroke-width="2.5"/>
+        <circle cx="50" cy="228" r="7" fill="#fff" stroke="#0B3D22" stroke-width="2.5"/>
+      </svg>
+      <div class="gps"><span class="dot"></span>GPS good · 4 m</div>
+      <div class="hud">
+        <div class="row sb">
+          <div><div class="big">1.8<span class="u"> acres</span></div>
+            <div style="font-size:11.5px;color:var(--ink2);margin-top:3px">Moved 1 corner by hand</div></div>
+          <span class="chip warn">Edited</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><div class="btn2">
+    <button class="btn s sm" style="flex:0 0 96px">Add dot</button>
+    <button class="btn p sm">Save shape</button></div></div>
+</div></div>
+<div class="cap"><span class="n">Screen 7 · When walking isn't possible</span>
+<h3>The escape hatch — and it leaves a mark</h3>
+<p>Standing water, a snake, a boundary running through someone's yard. He drags corners on the satellite picture instead. But an edited shape is <b>tagged as edited, permanently</b> — the office can always tell walked from drawn. Not to police him: because a drawn boundary is genuinely less reliable, and whoever settles a dispute in five months deserves to know which one they're holding.</p></div>
+</div>
+
+<!-- ============ 8 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:49</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:12.5px"></i></span>88%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>What changed</h4><div class="sub">Contracted vs sown</div></div></div>
+  <div class="body" style="padding:0">
+    <div class="map" style="height:186px">
+      <svg viewBox="0 0 300 186" preserveAspectRatio="none">
+        <defs><pattern id="hatch" width="8" height="8" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="0" x2="0" y2="8" stroke="#FF8A7A" stroke-width="3.2"/></pattern></defs>
+        <polygon points="206,28 246,52 232,124 190,132" fill="url(#hatch)" opacity=".85"/>
+        <polygon points="42,22 176,14 206,28 190,132 96,140 50,88"
+          fill="rgba(56,200,120,.4)" stroke="#3BE08A" stroke-width="3"/>
+        <polygon points="42,22 176,14 246,52 232,124 96,140 50,88"
+          fill="none" stroke="#fff" stroke-width="2.2" stroke-dasharray="6 4"/>
+      </svg>
+      <span class="mtag" style="left:12px;bottom:11px">Sown 1.8 ac</span>
+      <span class="mtag d" style="right:12px;bottom:11px">Not sown 0.6 ac</span>
+    </div>
+    <div style="padding:14px">
+      <div class="row sb" style="align-items:flex-end">
+        <div><div class="lbl">Sown today</div><div class="big" style="margin-top:4px">1.8<span class="u"> ac</span></div></div>
+        <div style="text-align:right"><div class="lbl">Contracted</div>
+          <div style="font-size:23px;font-weight:800;letter-spacing:-.03em;color:var(--ink2);margin-top:5px">2.4 ac</div></div>
+      </div>
+      <div class="bar amber" style="margin:12px 0 7px"><i style="width:75%"></i></div>
+      <div class="row sb"><span style="font-size:12.5px;font-weight:700;color:var(--amber)">75% of contract sown</span>
+        <span style="font-size:12.5px;color:var(--ink2)">0.6 acres short</span></div>
+      <div class="km"><span><i style="background:#3BE08A"></i>Sown now</span>
+        <span><i style="background:#fff;border:1.5px dashed var(--ink3)"></i>Nov boundary</span>
+        <span><i style="background:#FF8A7A"></i>Left out</span></div>
+      <div class="sep"></div>
+      <div class="lbl" style="margin-bottom:8px">Because the gap is over 20%</div>
+      <div class="card warn" style="padding:10px 11px">
+        <div style="font-size:12px;line-height:1.55;color:var(--amber)">
+          A reason and a photo are needed · seed order for 0.6 acres gets reversed ·
+          <b>input release pauses until your supervisor looks</b></div></div>
+    </div>
+  </div>
+  <div class="foot"><button class="btn p">Continue</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 8 · The number, in the field</span>
+<h3>Both areas on one picture, before he leaves</h3>
+<p>The comparison the brief asks for isn't a report someone runs later — it's <b>on screen while the farmer is standing there.</b> That changes the conversation from "we'll let you know" to "you've sown three-quarters, Suresh, what happened to the east side?" Colour alone never carries the meaning: the hatching, the labels and the numbers each say it independently, because this is read in glare by someone who may not read English well.</p></div>
+</div>
+
+<!-- ============ 9 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:50</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:12.5px"></i></span>88%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Why the difference?</h4><div class="sub">0.6 acres not sown</div></div></div>
+  <div class="body">
+    <div class="banner warn" style="margin-bottom:14px">
+      <b>This is a big difference.</b>Over 20% of the contract. Add a reason and a photo before you go on.</div>
+    <div class="lbl" style="margin-bottom:9px">What did Suresh say?</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <div class="card hi" style="padding:13px 10px;text-align:center">
+        <div style="font-size:21px;line-height:1">💧</div>
+        <div style="font-size:12.5px;font-weight:700;margin-top:5px;color:var(--green-d)">No water</div></div>
+      <div class="card" style="padding:13px 10px;text-align:center">
+        <div style="font-size:21px;line-height:1">🌱</div>
+        <div style="font-size:12.5px;font-weight:700;margin-top:5px">No seed</div></div>
+      <div class="card" style="padding:13px 10px;text-align:center;margin-top:0">
+        <div style="font-size:21px;line-height:1">⚖️</div>
+        <div style="font-size:12.5px;font-weight:700;margin-top:5px">Land dispute</div></div>
+      <div class="card" style="padding:13px 10px;text-align:center;margin-top:0">
+        <div style="font-size:21px;line-height:1">🌾</div>
+        <div style="font-size:12.5px;font-weight:700;margin-top:5px">Other crop</div></div>
+      <div class="card" style="padding:13px 10px;text-align:center;margin-top:0">
+        <div style="font-size:21px;line-height:1">👥</div>
+        <div style="font-size:12.5px;font-weight:700;margin-top:5px">No labour</div></div>
+      <div class="card" style="padding:13px 10px;text-align:center;margin-top:0">
+        <div style="font-size:21px;line-height:1">＋</div>
+        <div style="font-size:12.5px;font-weight:700;margin-top:5px">Something else</div></div>
+    </div>
+    <div class="sep"></div>
+    <div style="font-size:11.5px;color:var(--ink2);line-height:1.5">
+      Your answer decides who picks this up. <b style="color:var(--ink)">No water</b> goes to the
+      procurement forecast. <b style="color:var(--ink)">Land dispute</b> goes to legal.
+      <b style="color:var(--ink)">No seed</b> is ours to answer for.</div>
+  </div>
+  <div class="foot"><button class="btn p">Next — add a photo</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 9 · Two seconds, not two minutes</span>
+<h3>The app pushes back, but it doesn't block</h3>
+<p>Over 20% short, so the app asks for a reason — <b>a request with a stated cause, not an error.</b> Six taps, no typing. These six aren't decoration: "no water" is a procurement forecast problem, "land dispute" is a legal one, "no seed" is our own supply failure. Same 0.6 acres, three completely different responses from three different teams — and the difference costs him one tap.</p></div>
+</div>
+
+<!-- ============ 10 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:51</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:12px"></i></span>87%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Photo and note</h4><div class="sub">Suresh Jadhav · Sowing</div></div></div>
+  <div class="body">
+    <div class="lbl" style="margin-bottom:9px">Photos · 2 taken</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px">
+      <div style="position:relative;height:92px;border-radius:9px;overflow:hidden" class="map">
+        <span class="mtag" style="left:5px;bottom:5px;font-size:8.5px;padding:2px 5px">07:50 · Ambegaon</span></div>
+      <div style="position:relative;height:92px;border-radius:9px;overflow:hidden" class="map">
+        <span class="mtag" style="left:5px;bottom:5px;font-size:8.5px;padding:2px 5px">07:51 · Ambegaon</span></div>
+    </div>
+    <div class="banner ok" style="margin-bottom:14px;padding:9px 11px;font-size:11.5px">
+      Each photo carries its own time and place. Nobody has to take anyone's word later.</div>
+    <div class="lbl" style="margin-bottom:9px">Spoken note</div>
+    <div class="card" style="padding:12px">
+      <div class="row">
+        <span class="ava g" style="width:36px;height:36px;font-size:15px">▶</span>
+        <svg width="150" height="26" style="flex:1">
+          <g fill="#0E6B3C">
+          <rect x="2" y="9" width="3" height="8" rx="1.5"/><rect x="9" y="5" width="3" height="16" rx="1.5"/>
+          <rect x="16" y="1" width="3" height="24" rx="1.5"/><rect x="23" y="7" width="3" height="12" rx="1.5"/>
+          <rect x="30" y="3" width="3" height="20" rx="1.5"/><rect x="37" y="10" width="3" height="6" rx="1.5"/>
+          <rect x="44" y="4" width="3" height="18" rx="1.5"/><rect x="51" y="8" width="3" height="10" rx="1.5"/>
+          <rect x="58" y="2" width="3" height="22" rx="1.5"/><rect x="65" y="9" width="3" height="8" rx="1.5"/>
+          <rect x="72" y="6" width="3" height="14" rx="1.5"/><rect x="79" y="11" width="3" height="4" rx="1.5"/>
+          </g><g fill="#CDD2C7">
+          <rect x="86" y="7" width="3" height="12" rx="1.5"/><rect x="93" y="10" width="3" height="6" rx="1.5"/>
+          <rect x="100" y="5" width="3" height="16" rx="1.5"/><rect x="107" y="9" width="3" height="8" rx="1.5"/>
+          <rect x="114" y="3" width="3" height="20" rx="1.5"/><rect x="121" y="10" width="3" height="6" rx="1.5"/>
+          <rect x="128" y="7" width="3" height="12" rx="1.5"/><rect x="135" y="11" width="3" height="4" rx="1.5"/></g>
+        </svg>
+        <span style="font-size:12.5px;font-weight:700;color:var(--ink2)">0:08</span>
+      </div>
+      <div class="sep" style="margin:10px 0"></div>
+      <div style="font-size:12px;color:var(--ink2);font-style:italic">
+        "बोअरवेल डिसेंबरमध्ये बंद पडली — 20 तारखेपर्यंत पाऊस आला तर पेरणी करेन"</div>
+    </div>
+  </div>
+  <div class="foot"><button class="btn p">Show Suresh</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 10 · Eight seconds of talking</span>
+<h3>He holds a button and speaks. He never types.</h3>
+<p>Typing that sentence — on a phone, in the sun, in Marathi, with a farmer waiting — takes two minutes and happens <b>exactly once</b>, on day one, and never again. Held button, eight seconds, done. Photos stamp their own time and place at capture, which quietly does most of the anti-fraud work without a single feature that feels like surveillance.</p></div>
+</div>
+
+<!-- ============ 11 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:52</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:12px"></i></span>87%</span></span></div>
+  <div class="appbar"><div><h4>Show this to Suresh</h4><div class="sub">In Marathi</div></div>
+    <span class="chip info" style="margin-left:auto">मराठी</span></div>
+  <div class="body">
+    <div class="card hi" style="text-align:center;padding:17px 14px">
+      <div style="font-size:16px;font-weight:700;line-height:1.5;color:var(--green-d)">
+        तुमच्या शेतातील<br><span style="font-size:32px;font-weight:800;letter-spacing:-.02em">१.८ एकर</span><br>पेरणी झाली आहे</div>
+      <div class="sep" style="margin:12px 0"></div>
+      <div style="font-size:13px;color:var(--ink2)">करारानुसार: <b style="color:var(--ink)">२.४ एकर</b></div>
+      <div style="font-size:11.5px;color:var(--ink3);margin-top:7px">1.8 acres sown of 2.4 contracted</div>
+    </div>
+    <div class="lbl" style="margin:14px 0 8px">सही · Signature</div>
+    <div style="border:1.6px dashed var(--line2);border-radius:10px;height:74px;position:relative;background:#FCFCFA">
+      <svg width="100%" height="74" viewBox="0 0 280 74">
+        <path d="M26 56 C31 28, 40 20, 44 40 C47 57, 55 55, 58 36 C61 20, 71 19, 75 44
+                 C78 63, 88 58, 95 34 L101 57 C107 26, 120 32, 127 50 C132 63, 145 55, 151 28
+                 C157 42, 166 49, 178 39 C191 27, 203 33, 211 49 L219 33 L246 46"
+          fill="none" stroke="#141613" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M28 62 L214 60" fill="none" stroke="#141613" stroke-width="1.6" opacity=".5"/>
+      </svg>
+      <span style="position:absolute;right:9px;bottom:6px;font-size:10.5px;color:var(--ink3)">07:52</span>
+    </div>
+    <div class="row" style="margin-top:11px;gap:9px">
+      <div class="map" style="width:52px;height:52px;border-radius:8px;flex:none"></div>
+      <div style="font-size:11.5px;color:var(--ink2);line-height:1.45">
+        Photo of Suresh at his plot<br><span style="color:var(--ink3)">Ambegaon · 07:52 · 18.51°N 73.86°E</span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="banner info" style="padding:9px 11px;font-size:11.5px">
+      <b>If Suresh is not here</b>the capture is still saved. The club leader can witness it, or it
+      waits for confirming on the next visit.</div>
+  </div>
+  <div class="foot"><div class="btn2">
+    <button class="btn s sm" style="flex:0 0 118px">Not here</button>
+    <button class="btn p sm">Confirmed</button></div></div>
+</div></div>
+<div class="cap"><span class="n">Screen 11 · Sixty seconds that save a settlement</span>
+<h3>The phone turns around</h3>
+<p>The dispute doesn't happen today. It happens <b>five months from now, at settlement, with money on the table</b>, when Suresh says that was never my land — and it's his word against a technician who's since visited four hundred farms. You lose that argument every time. Sixty seconds now is the cheapest prevention there is. The quieter effect matters more: <b>if the farmer is watching, the capture can't be faked.</b> "Not here" is deliberately available — a missing farmer must never cost us the capture.</p></div>
+</div>
+
+<!-- ============ 12 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>07:53</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:12px"></i></span>87%</span></span></div>
+  <div class="appbar"><div><h4>Saved</h4><div class="sub">Bhagwati Club · Sowing</div></div>
+    <div class="right">1 / 17</div></div>
+  <div class="body">
+    <div class="banner ok" style="margin-bottom:14px">
+      <b>Suresh Jadhav — saved on your phone.</b>It will send itself tonight. Nothing to do now.</div>
+    <div class="card">
+      <div class="row sb"><span style="font-size:13px;font-weight:700">Sown</span>
+        <span style="font-size:15px;font-weight:800">1.8 acres</span></div>
+      <div class="sep" style="margin:9px 0"></div>
+      <div class="row sb" style="margin-bottom:6px"><span style="font-size:12.5px;color:var(--ink2)">Reason</span>
+        <span class="chip warn">No water</span></div>
+      <div class="row sb" style="margin-bottom:6px"><span style="font-size:12.5px;color:var(--ink2)">Evidence</span>
+        <span style="font-size:12.5px;font-weight:700">2 photos · 1 note</span></div>
+      <div class="row sb"><span style="font-size:12.5px;color:var(--ink2)">Farmer confirmed</span>
+        <span class="chip ok">Signed</span></div>
+    </div>
+    <div class="sep"></div>
+    <div class="row sb" style="margin-bottom:9px"><span class="lbl">Waiting to send</span>
+      <span style="font-size:12.5px;font-weight:700;color:var(--ink2)">1 visit</span></div>
+    <div class="row sb"><div>
+      <div class="big" style="font-size:34px">16</div>
+      <div class="lbl" style="margin-top:3px">Farmers left</div></div>
+      <div style="text-align:right"><div class="big" style="font-size:34px">3<span class="u">h 10m</span></div>
+      <div class="lbl" style="margin-top:3px">At this pace</div></div></div>
+    <div class="sep"></div>
+    <div class="lbl" style="margin-bottom:8px">Up next</div>
+    <div class="card" style="padding:10px 11px">
+      <div class="row"><span class="ava g" style="width:28px;height:28px;font-size:12px">2</span>
+        <div style="flex:1"><div style="font-size:13px;font-weight:700">Anita Pawar</div>
+        <div style="font-size:11.5px;color:var(--ink2)">1.6 acres · Cotton · 400 m away</div></div></div>
+    </div>
+  </div>
+  <div class="foot"><button class="btn p">Next — Anita Pawar</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 12 · Total time, 3 min 40 sec</span>
+<h3>Progress measured in farmers, not percentages</h3>
+<p>"16 farmers left, about 3 hours" is the only unit he thinks in. A percentage bar tells him nothing he can act on; <b>this tells him whether to speed up.</b> And the reassurance is doing real work — "it will send itself tonight, nothing to do now" is what stops him worrying about a network that isn't there and won't be for another nine hours.</p></div>
+</div>
+
+<!-- ============ 13 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>10:14</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:9px"></i></span>61%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Vijay Kale</h4><div class="sub">Farmer 7 · Sowing</div></div></div>
+  <div class="body flush">
+    <div class="map" style="height:210px">
+      <svg viewBox="0 0 300 210" preserveAspectRatio="none">
+        <polygon points="46,34 178,26 244,72 226,158 92,170 54,104"
+          fill="rgba(255,190,60,.2)" stroke="#FFC94D" stroke-width="3" stroke-dasharray="9 5"/>
+        <circle cx="150" cy="98" r="42" fill="rgba(255,201,77,.15)" stroke="#FFC94D" stroke-width="1.5"/>
+        <circle cx="150" cy="98" r="7" fill="#FFC94D" stroke="#fff" stroke-width="2.5"/>
+      </svg>
+      <div class="gps warn"><span class="dot"></span>GPS weak · 14 m</div>
+      <span class="mtag d" style="right:11px;bottom:11px">Tree line on west edge</span>
+    </div>
+    <div style="padding:14px">
+      <div class="banner warn" style="margin-bottom:12px">
+        <b>Location is weak here.</b>Saved anyway. The office will check this one.</div>
+      <div class="row sb" style="margin-bottom:10px">
+        <span style="font-size:12.5px;color:var(--ink2)">Needed for sowing</span>
+        <span style="font-size:12.5px;font-weight:700">Within 8 m</span></div>
+      <div class="row sb"><span style="font-size:12.5px;color:var(--ink2)">You have</span>
+        <span style="font-size:12.5px;font-weight:800;color:var(--amber)">14 m</span></div>
+    </div>
+  </div>
+  <div class="foot"><div class="btn2">
+    <button class="btn s sm">Try again</button>
+    <button class="btn p sm">Save and go on</button></div></div>
+</div></div>
+<div class="cap"><span class="n">Screen 13 · Error state — weak GPS</span>
+<h3>Never block a man alone in a field</h3>
+<p>No signal, no supervisor to phone, thirteen farmers left. If the app refuses his work he has <b>no way forward</b> — so he learns the app is an obstacle to get around, and everything he captures afterwards is worth less. So: save it, label it honestly, let the office deal with it. "Save and go on" is the primary button, deliberately. <b>A record with a warning on it beats no record and a technician who's stopped trusting the tool.</b></p></div>
+</div>
+
+<!-- ============ 14 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>11:40</span>
+    <span class="r"><span class="nosig">No network</span><span class="batt"><span class="b"><i style="width:7px"></i></span>48%</span></span></div>
+  <div class="appbar"><span class="back">←</span><div><h4>Boundaries overlap</h4><div class="sub">Farmer 12 · Ravi Gaikwad</div></div></div>
+  <div class="body flush">
+    <div class="map" style="height:210px">
+      <svg viewBox="0 0 300 210" preserveAspectRatio="none">
+        <defs><pattern id="x2" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+          <line x1="0" y1="0" x2="0" y2="9" stroke="#FF6B5E" stroke-width="4"/></pattern></defs>
+        <polygon points="34,40 150,30 172,120 148,168 46,152" fill="rgba(56,200,120,.28)" stroke="#3BE08A" stroke-width="2.6"/>
+        <polygon points="132,36 254,48 240,164 128,158" fill="rgba(90,170,255,.24)" stroke="#7CC0FF" stroke-width="2.6"/>
+        <polygon points="132,36 150,30 172,120 148,168 128,158" fill="url(#x2)" opacity=".9"/>
+      </svg>
+      <span class="mtag" style="left:11px;top:11px">Ravi</span>
+      <span class="mtag" style="right:11px;top:11px">Bhau Shinde</span>
+      <span class="mtag d" style="left:50%;transform:translateX(-50%);bottom:11px">Both claim 0.3 ac</span>
+    </div>
+    <div style="padding:14px">
+      <div class="banner bad" style="margin-bottom:12px">
+        <b>This overlaps Bhau Shinde's plot by 0.3 acres.</b>Both are saved. Neither is deleted.</div>
+      <div class="card" style="padding:11px">
+        <div style="font-size:12.5px;line-height:1.5;color:var(--ink2)">
+          <b style="color:var(--ink)">Do not settle this in the field.</b> It goes to your supervisor with both
+          boundaries, both dates and both photos.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><button class="btn p">Send to supervisor and go on</button></div>
+</div></div>
+<div class="cap"><span class="n">Screen 14 · Error state — overlapping claims</span>
+<h3>The most important thing here is what the app refuses to do</h3>
+<p>It does not ask "which one is correct?" That question would make <b>a man with a smartphone the judge of a land dispute</b> between two people who will still be neighbours in twenty years — and both will blame him. That's not a software problem, it's a village problem needing authority, both parties and probably a land record. The app's entire job is to notice it, keep both claims, and escalate. <b>Knowing where the app's authority ends is a design decision.</b></p></div>
+</div>
+
+<!-- ============ 15 ============ -->
+<div class="cell">
+<div class="phone"><div class="screen">
+  <div class="sysbar"><span>20:34</span>
+    <span class="r"><span>WiFi</span><span class="batt"><span class="b"><i style="width:5px"></i></span>22%</span></span></div>
+  <div class="appbar"><div><h4>Sending today's work</h4><div class="sub">Bhagwati Club · 14 December</div></div></div>
+  <div class="body">
+    <div class="row sb" style="margin-bottom:8px">
+      <span style="font-size:13.5px;font-weight:700">18 of 20 sent</span>
+      <span style="font-size:12.5px;font-weight:700;color:var(--green)">90%</span></div>
+    <div class="bar" style="margin-bottom:13px"><i style="width:90%"></i></div>
+    <div class="card" style="padding:11px">
+      <div class="row sb" style="margin-bottom:8px">
+        <span style="font-size:12.5px">Visit details</span><span class="chip ok">All 20 sent</span></div>
+      <div class="row sb"><span style="font-size:12.5px">Photos</span><span class="chip warn">34 of 41</span></div>
+      <div class="sep" style="margin:10px 0"></div>
+      <div style="font-size:11.5px;color:var(--ink2);line-height:1.5">
+        Details go first. Photos follow on their own — <b style="color:var(--ink)">a slow photo never holds up a visit.</b></div>
+    </div>
+    <div class="banner ok" style="margin:12px 0;padding:9px 11px;font-size:12px">
+      2 waiting for a better connection. <b>Nothing is lost</b> — they'll go by themselves.</div>
+    <div class="card warn" style="padding:11px">
+      <div class="row sb" style="margin-bottom:7px">
+        <span style="font-size:13px;font-weight:700;color:var(--amber)">3 need a note from you</span>
+        <span class="chip warn">Tonight</span></div>
+      <div style="font-size:11.5px;color:var(--amber);line-height:1.5">
+        Suresh — 25% short · Ravi — overlap · Sunil — sown more than contract</div>
+    </div>
+  </div>
+  <div class="foot"><div class="btn2">
+    <button class="btn s sm">Add notes</button>
+    <button class="btn p sm">Get tomorrow</button></div></div>
+</div></div>
+<div class="cap"><span class="n">Screen 15 · 8:34 pm, back on WiFi</span>
+<h3>Details first. Photos catch up on their own.</h3>
+<p>Photos are large and slow. If a visit weren't complete until its photos arrived, <b>one weak connection would hold up all twenty.</b> So each visit is usable the moment its details land. The three notes are asked for <b>tonight, while he still remembers</b> — by next week the day has blurred into the other nineteen. And it ends by pulling down tomorrow, which closes the loop back to screen 1.</p></div>
+</div>
+
+</div><!-- /grid -->
+</div><!-- /wrap -->
