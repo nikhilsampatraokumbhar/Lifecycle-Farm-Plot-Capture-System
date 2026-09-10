@@ -6,18 +6,11 @@ Take-home exercise. Senior Product Manager (Technical), AgriTech.
 
 | File | What it is |
 |---|---|
-| `docs/decision-log.md` | **The main working document.** Every choice, why I made it, what I gave up. Goes to them alongside the submission. |
+| `build/Lifecycle-Farm-Plot-Capture-Nikhil-Kumbhar.pdf` | **The submission.** 15 pages, assembled from the sections below. |
+| `submission/` | The sections as markdown, the 15 screens, the figures, and the build scripts. |
+| `docs/decision-log.md` | **The companion document.** Every choice, why I made it, what I gave up. Goes to them alongside the submission. |
 | `docs/how-we-work.md` | Ground rules I set for building this: no jargon, proper screens, show the thinking. |
 | `docs/the-brief.txt` | The original exercise, as plain text, so we quote it exactly instead of from memory. |
-
-## What still has to be built
-
-1. ~~**User journey map.**~~ Done. `submission/01-journey-map.md`.
-2. ~~**Screens.**~~ Done. `submission/screens/screens.html`, 15 screens.
-3. ~~**Technical write-up.**~~ Done. `submission/02-technical.md`, 3 pages.
-4. **What the data is good for.** 1 page. At least 4 of the 7 uses listed in the brief.
-
-All of it inside 15 pages, screens included.
 
 ## The submission
 
