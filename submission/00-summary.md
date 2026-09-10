@@ -29,15 +29,11 @@ The area gap is the one worth chasing. Disputes at settlement, inputs sent again
 
 ### 1 · A plot keeps a history
 
-Every visit adds a record. Old records are never edited or deleted, and a wrong capture gets a correction added beneath it.
-
-Contracted against sown becomes two records side by side. A dispute five months later becomes a dated, photographed, signed history. Two technicians capturing the same plot stops being a software problem and becomes a person deciding. At settlement, an overwritten record proves nothing.
+Every visit adds a record. Old records are never edited or deleted, and a wrong capture gets a correction added beneath it. Contracted against sown becomes two records side by side. A dispute five months later becomes a dated, photographed, signed history. At settlement, an overwritten record proves nothing.
 
 ### 2 · Everything has to fit inside eleven minutes
 
-Not as a target. As the constraint that decides what gets built.
-
-Anything that does not fit in the day gets faked, and a faked capture is worse than none because it is wrong **and** it looks official. So the design earns his time rather than spending it: walk once then mark the difference, one tap for the farmer who sowed everything, a spoken note instead of a typed one, and a download at nine at night rather than at 6:40 in the morning.
+Not as a target. As the constraint that decides what gets built. Anything that does not fit in the day gets faked, and a faked capture is worse than none because it is wrong **and** it looks official. So the design earns his time rather than spending it: walk once then mark the difference, one tap for the farmer who sowed everything, a spoken note instead of a typed one, and a download at nine at night rather than at 6:40 in the morning.
 
 ---
 

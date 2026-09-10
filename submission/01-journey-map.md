@@ -12,13 +12,13 @@
 
 The app asks one thing while he is at home with his phone charging: *tomorrow is Bhagwati Club, 20 farmers, download now?* One tap, four minutes.
 
-**Why not the morning?** At 6:40 he wants to be on his bike, and a progress bar is something he will skip. At 9pm he has nothing else to do. **If this did not happen, nothing else in this document matters**, so a missed download shows as a red screen in the morning, not a warning.
+At 6:40 he wants to be on his bike and would skip it. Because the whole day rests on this, a missed download shows as a red screen in the morning, not a warning.
 
 ### 2 · 7:34 am. The plan is already wrong.
 
 Two minutes with the club leader: three farmers have gone to the market, one has not sown, one has had a death in the family. He taps the three who are away and the order reshuffles. Thirty seconds.
 
-**I designed a clever route planner here and cut it.** The plan made at 9pm survives four minutes of contact with the village. What he needs is not a better plan, it is one that is cheap to change.
+**I designed a clever route planner here and cut it.** The plan made at 9pm survives four minutes of contact with the village, so what he needs is not a better plan, it is one that is cheap to change.
 
 ### 3 · 7:43 am. One question, usually one tap.
 
@@ -26,17 +26,17 @@ Suresh Jadhav. Contract 2.4 acres, boundary walked 12 November. The app asks him
 
 > **Has Suresh sown the whole field?**   ·   **[ Yes, all of it ]**   **[ No, only part ]**
 
-Yes is one tap. **Twenty-five seconds**, no map, no walking.
+Yes is one tap. **Twenty-five seconds**, no map, no walking. Most farmers sow most of their field, so if the common answer took four minutes instead, the day would not exist.
 
-Most farmers sow most of their field. If the common answer takes twenty-five seconds the day works. If it takes four minutes the day does not exist.
+<div class="pagebreak"></div>
 
 ### 4 · 7:46 am. He walks 92 metres, not 380.
 
 Suresh's answer is no. The eastern strip is dry.
 
-The outer boundary was walked in November and has not moved, so he walks **only the line between sown and unsown**, and the app closes the shape against the boundary it already holds. Ninety seconds instead of eight minutes.
+The outer boundary was walked in November and has not moved, so he walks **only the line between sown and unsown** and the app closes the shape against the boundary it already holds. Ninety seconds instead of eight minutes.
 
-One number stays large as he walks: **1.8 acres sown, of 2.4 contracted, 75%.** He knows now, in the field, with Suresh next to him. That turns *"we will let you know"* into *"you have sown three quarters, what happened to the east side?"*
+One number stays large as he walks: **1.8 acres sown, of 2.4 contracted, 75%.** Knowing it in the field, with Suresh next to him, turns *"we will let you know"* into *"you have sown three quarters, what happened to the east side?"*
 
 The gap is over 20%, so the app asks why. Six icons, one tap: **no water**. Two photos, which carry their own time and place. Then eight seconds of spoken Marathi, because typing that sentence in the sun with a farmer waiting would happen exactly once.
 
@@ -44,7 +44,7 @@ The gap is over 20%, so the app asks why. Six icons, one tap: **no water**. Two 
 
 Suresh sees his own field, the shape and the number, in Marathi. He signs with his finger. A photo of him at his plot.
 
-**Sixty seconds, and here is what it buys.** The dispute happens five months from now at settlement, when Suresh says that was never my land, and it is his word against a technician who has since visited four hundred farms. The quieter effect is bigger: **if the farmer is watching, the capture cannot be faked.**
+**Sixty seconds.** The dispute happens five months from now at settlement, when Suresh says that was never my land, and it is his word against a technician who has since visited four hundred farms. The quieter effect is bigger: **if the farmer is watching, the capture cannot be faked.**
 
 Saved. **Total for a difficult farmer: 3 minutes 40 seconds.**
 

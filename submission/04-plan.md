@@ -14,7 +14,7 @@
 
 ## How I would know it is working
 
-**The number we are trying to move.** Gap between contracted and actual cultivated area, from 15 to 25% down to under 5%, and settlement disputes per hundred farmers falling season on season.
+**The number we are trying to move:** the gap between contracted and actual cultivated area, from 15 to 25% down to under 5%, with settlement disputes falling season on season.
 
 **The numbers that must not get worse.** There is an easy way to reach 99% accuracy: make capture so thorough that technicians finish half their farms.
 
@@ -31,17 +31,15 @@
 
 ## Paying for accuracy, not volume
 
-**You cannot design around a pay slip.** Technicians are usually paid on volume, which quietly pays a man to go fast and guess. No interface beats that, because the app is competing with his salary.
+**You cannot design around a pay slip.** Technicians are usually paid on volume, which quietly pays a man to go fast and guess, and no interface beats that because the app is competing with his salary.
 
 **But the obvious fix is a trap.** Not accuracy directly, because there is no ground truth on most plots. And never clean data, because paying for captures with no flags pays a man to hide problems. **We pay for a well-made record, not a convenient number.**
 
 {{fig:incentives}}
 
-**An unannounced supervisor re-walk on a random 3 to 5% of plots is the anchor.** Without one independent measurement, every other signal is the phone checking its own work.
+**An unannounced supervisor re-walk on a random 3 to 5% of plots is the anchor**, because without one independent measurement every other signal is the phone checking its own work.
 
-**His score must never depend on his farmers' behaviour.** If it does he will avoid the difficult villages, and those are where the data matters most.
-
-**And it runs for a full season with no money attached.** You do not bolt pay onto a metric you have not watched.
+**His score must never depend on his farmers' behaviour**, or he will avoid the difficult villages, which are where the data matters most. **And it runs for a full season with no money attached**, because you do not bolt pay onto a metric you have not watched.
 
 ---
 
