@@ -51,4 +51,4 @@ Anything that does not fit in the day gets faked, and a faked capture is worse t
 | **What the data is worth after the visit** · seven uses of the same record | 13 |
 | **What I would build first** · the plan, the numbers, and how technicians get paid | 14 |
 
-Sixteen decisions sit behind this, each with the options weighed and **what the choice cost.** They are in a separate decision log alongside this document.
+Fifteen decisions sit behind this, each with the options weighed and **what the choice cost.** They are in a separate decision log alongside this document.

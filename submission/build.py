@@ -18,6 +18,9 @@ def to_html(md_path, out_path, title):
     md = markdown.Markdown(extensions=['tables', 'attr_list', 'sane_lists'])
     body = inject_figures(md.convert(pathlib.Path(md_path).read_text()))
     css = (ROOT / 'assets' / 'doc.css').read_text()
+    extra = ROOT / 'assets' / 'log.css'
+    if 'decision-log' in str(md_path) and extra.exists():
+        css += '\n' + extra.read_text()
     html = (f"<title>{title}</title>\n<style>\n{css}\n</style>\n"
             f'<div class="sheet">\n{body}\n</div>\n')
     pathlib.Path(out_path).write_text(html)

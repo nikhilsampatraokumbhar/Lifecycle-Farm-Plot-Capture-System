@@ -3,26 +3,23 @@
 
 ---
 
-## Why this document exists
+## Read this only if you want to
 
-The submission is the answer. This is how I got there.
+**The submission stands on its own.** It is the answer, and nothing in it needs this document to make sense.
 
-Designing this system was really a series of choices, and every single choice meant giving something up. This document is the record: what I decided, why I decided it, and what I knowingly left on the table.
-
-I'm sharing it because I think the choices are more revealing than the design. Anyone can draw screens. The job is deciding which screens shouldn't exist.
+This is the working underneath it: fifteen decisions, what each was weighed against, and what each one cost. I am including it because I think the choices are more revealing than the design. Anyone can draw screens. The harder job is deciding which screens should not exist.
 
 ---
 
 ## How each decision is written
 
-Every decision in this document is mine to make. None of them are locked until I say so.
+Every one is set out the same way: the question, the options I weighed against each other, the call, the reasoning, and then the part that matters most, which is **what that choice cost me.** No decision is recorded without the thing it gave up, because a choice with no downside is not a choice, it is a preference.
 
-Each one is written the same way. The question, the options I weighed, what I'd lean towards, and then the part that matters most: what that choice costs me.
+Each also carries a line marked *how I'd explain it in the room*, which is the reasoning as I would say it out loud to a business audience rather than as it reads on a page.
 
 ---
----
 
-# All sixteen decisions on one page
+# All fifteen decisions on one page
 
 *If I only get five minutes, this is the page.*
 
@@ -42,15 +39,13 @@ Each one is written the same way. The question, the options I weighed, what I'd 
 | **D12** | Download today's club and tomorrow's, the night before, not in the morning. | At 6:40 in the morning a progress bar gets skipped. At 9pm it doesn't. Everything else rests on this happening. |
 | **D13** | A Club is a real record with its own history, not a label on a farmer. | The work is club-shaped. An app built around scattered farm visits fights how the job works. |
 | **D14** | Two languages. Pictures before words. Spoken notes, never typed. No settings screen. | A small training budget isn't a constraint to work around, it's the design brief. |
-| **D15** | One editable source now. Package it as PDF, slides and a document only at the end. | Lock it into slides early and I start avoiding edits, which makes the document worse. |
-| **D16** | Pay a base on volume, but make the variable part depend on how the record was made, never on how clean it came back. | You cannot design around a pay slip. And paying for clean captures pays a man to hide problems. |
+| **D15** | Pay a base on volume, but make the variable part depend on how the record was made, never on how clean it came back. | You cannot design around a pay slip. And paying for clean captures pays a man to hide problems. |
 
 **The two ideas underneath all fifteen:**
 
 1. **A plot is not a shape, it's a shape with a history.** We never overwrite, every visit adds a record and the old ones stay. That one rule answers comparison, disputes, settlement and insurance all at once.
 2. **The design has to fit inside eleven minutes per farmer.** Every call above is downstream of that number. Anything that doesn't fit in the day doesn't get done. It gets faked, and faked data is worse than none.
 
----
 ---
 
 # Part 1 · Three things I worked out first
@@ -146,7 +141,6 @@ Two things I take from this:
 
 **Two. The screens are worth zero marks on their own.** There is no "wireframes" line in the scoring. They're scored *inside* field empathy, meaning the screens only earn marks if they prove I understand the field. So every screen has to show a real field problem being handled, not just a pretty layout.
 
----
 ---
 
 # Part 2 · The calls I made
@@ -510,7 +504,7 @@ Which means, concretely:
 
 ---
 
-### D16. How field technicians get paid
+### D15. How field technicians get paid
 **Status: DECIDED**
 
 > **The call: pay a base on volume, because he still has to visit everyone, and make the variable part depend on how the record was made rather than on how accurate or how clean it turned out.**
@@ -546,7 +540,6 @@ Which means, concretely:
 
 **How I'd explain it in the room:** *"You cannot design around a pay slip. If he is paid per visit closed, the fastest path is to guess, and the app is competing with his salary. But paying for accuracy does not work either, because we have no ground truth, and paying for clean captures is worse than doing nothing because it pays him to hide the pest damage. So we pay on how the record was made: walked rather than drawn, farmer present and signed, evidence complete, accuracy inside the threshold. All of it is visible in the capture, none of it needs the true area, and a random three percent supervisor re-walk keeps it honest. And we run it for a season with no money attached, because you do not bolt pay onto a metric you have not watched."*
 
----
 ---
 
 # Part 3 · What I am not building, and why
@@ -628,18 +621,3 @@ If a sentence in the submission can't be said out loud in a meeting without soun
 ---
 
 **How I'd explain it in the room:** *“A small training budget isn't a constraint to work around, it's the design brief. If the app needs training, the app is wrong. He does this four hundred times a month. He'll learn it by repetition or not at all, and only if it's simple enough for that. And typing a note on a phone, in the sun, in a local language, with a farmer waiting, takes two minutes and will happen exactly once.”*
-
----
-
-# Part 7 · One more decision, about the submission
-
-### D15. What form does the submission take?
-**Status: DECIDED**
-
-> **The call: build it as a PDF from source I can keep editing. At the very end, once the content is settled, also produce a slide version and an editable document version.**
-
-**Why this order:** the content is going to change a dozen times before it's right. Locking it into a slide deck early means every edit costs three times as much, and I'd start avoiding edits, which is how documents end up worse than they should be. So: one source, edited freely until it's finished, then packaged three ways at the end.
-
-**What I'm giving up:** the packaging work all lands at the end, in one block, which is where time pressure usually is. Worth it. I'd rather be under pressure to format than under pressure to think.
-
-**How I'd explain it in the room:** *“The content will change a dozen times before it's right. Lock it into slides early and every edit costs three times as much, and then I start avoiding edits, which is exactly how documents end up worse than they should be.”*

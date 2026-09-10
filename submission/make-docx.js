@@ -145,7 +145,26 @@ function convert(md) {
 }
 
 // ---------- assemble ----------
+const LOG_MODE = process.argv[2] === 'log';
 const children = [];
+function buildLog() {
+  children.push(...convert(fs.readFileSync(path.join(REPO, 'docs', 'decision-log.md'), 'utf8')));
+  const out = path.join(REPO, 'build', 'Lifecycle-Farm-Plot-Capture-DECISION-LOG.docx');
+  const doc = new Document({
+    numbering: { config: [{ reference: 'nums', levels: [{ level: 0, format: 'decimal', text: '%1.', alignment: AlignmentType.START }] }] },
+    styles: { default: {
+      document: { run: { font: 'Calibri', size: 21 }, paragraph: { spacing: { line: 288 } } },
+      title:    { run: { font: 'Calibri', size: 40, bold: true, color: '141613' } },
+      heading1: { run: { font: 'Calibri', size: 30, bold: true, color: '141613' } },
+      heading2: { run: { font: 'Calibri', size: 25, bold: true, color: '141613' } },
+      heading3: { run: { font: 'Calibri', size: 22, bold: true, color: '0A4F2C' } },
+      heading4: { run: { font: 'Calibri', size: 21, bold: true, color: '0A4F2C' } },
+    } },
+    sections: [{ properties: { page: { margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } } }, children }],
+  });
+  Packer.toBuffer(doc).then(b => { fs.writeFileSync(out, b); console.log('wrote', path.basename(out), (b.length/1024).toFixed(0)+'KB'); });
+}
+if (LOG_MODE) { buildLog(); } else {
 children.push(new Paragraph({ heading: HeadingLevel.TITLE, children: runs('Lifecycle Farm Plot Capture') }));
 children.push(new Paragraph({ spacing: { after: 200 }, children: runs('*Editable text of the 15 page submission. Nikhil Sampatrao Kumbhar.*') }));
 children.push(new Paragraph({ spacing: { after: 100 }, children: runs('**How to use this file.** Edit the words freely. Keep the grey section markers and the green figure lines exactly where they are, because I use them to merge your edits back into the source. The screens and the twelve figures are drawn separately and are not editable here, so if you want something changed in one of those, just say so.') }));
@@ -183,3 +202,5 @@ const doc = new Document({
 
 const out = path.join(REPO, 'build', 'Lifecycle-Farm-Plot-Capture-EDITABLE.docx');
 Packer.toBuffer(doc).then(b => { fs.writeFileSync(out, b); console.log('wrote', path.basename(out), (b.length/1024).toFixed(0)+'KB'); });
+
+}
