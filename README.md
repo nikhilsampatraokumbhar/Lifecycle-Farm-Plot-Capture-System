@@ -12,9 +12,9 @@ Take-home exercise. Senior Product Manager (Technical), AgriTech.
 
 ## What still has to be built
 
-1. **User journey map.** A field technician's full day. Sowing stage, one club of 20 farmers, no signal at all.
-2. **Screens.** 15 mobile screens, properly designed.
-3. **Technical write-up.** 2-3 pages. Syncing, accuracy, disputes, how data is organised, route planning.
+1. ~~**User journey map.**~~ Done. `submission/01-journey-map.md`.
+2. ~~**Screens.**~~ Done. `submission/screens/screens.html`, 15 screens.
+3. ~~**Technical write-up.**~~ Done. `submission/02-technical.md`, 3 pages.
 4. **What the data is good for.** 1 page. At least 4 of the 7 uses listed in the brief.
 
 All of it inside 15 pages, screens included.
@@ -33,6 +33,10 @@ All of it inside 15 pages, screens included.
 | Plan, numbers, risks, what I'm not building | 1 |
 | **Total** | **14**, one page spare |
 
+## Building it
+
+`python3 submission/build.py <file.md> "<title>"` turns a section into HTML and a PDF in `build/`.
+
 ## Where we are
 
-Decisions captured. Nothing drawn yet. Waiting on the calls in `docs/decision-log.md`, the ones marked OPEN and LEANING.
+All fifteen decisions settled. Journey map, screens and technical write-up written. Still to do: the page on what the data is good for, and the front and back matter (summary, scope, metrics, what we are not building).
