@@ -50,7 +50,7 @@ This is the working underneath it. Every choice here meant giving something up, 
 
 **D14 · Two languages. Pictures before words. Spoken notes, never typed. No settings screen.** A small training budget is not a constraint to work around, it is the design brief. *Cost: icon-led design is ambiguous the first time, and I only find out which parts by watching people use it.*
 
-**D15 · Pay a base on volume, but make the variable part depend on how the record was made.** You cannot design around a pay slip, and paying for captures that come back clean pays a man to hide problems. *Cost: harder to administer, and the payback shows up in the input budget rather than in his line.*
+**D15 · Pay a base on volume, but make the variable part depend on how the record was made.** You cannot design around a pay slip. And if the bonus depends on captures coming back clean, he will simply stop reporting problems. *Cost: harder to administer, and the payback shows up in the input budget rather than in his line.*
 
 ---
 

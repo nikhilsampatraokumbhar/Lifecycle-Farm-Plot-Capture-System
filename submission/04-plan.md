@@ -33,7 +33,7 @@
 
 **You cannot design around a pay slip.** Technicians are usually paid on volume, which quietly pays a man to go fast and guess, and no interface beats that because the app is competing with his salary.
 
-**But the obvious fix is a trap.** Not accuracy directly, because there is no ground truth on most plots. And never clean data, because paying for captures with no flags pays a man to hide problems. **We pay for a well-made record, not a convenient number.**
+**But the obvious fix is a trap.** Not accuracy directly, because there is no ground truth on most plots. And never clean data. Pay a bonus for captures that come back clean, and he will simply stop reporting the pest damage, the overlap, and the plot sown over contract. **We pay for a well-made record, not a convenient number.**
 
 {{fig:incentives}}
 

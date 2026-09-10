@@ -49,4 +49,4 @@ Not as a target. As the constraint that decides what gets built. Anything that d
 
 **Fifteen decisions sit behind this, each recorded with what it cost.** Three of them shape everything else.
 
-**Walk the boundary properly once, then only ever mark what changed**, because walking it at every visit does not fit in the day, and what does not fit gets faked. **Never block a capture**, because an app that says no to a man alone in a field with no signal is an app that gets worked around. And **pay technicians on how the record was made, not on how clean it comes back**, because paying for captures with no flags pays a man to hide problems.
+**Walk the boundary properly once, then only ever mark what changed**, because walking it at every visit does not fit in the day, and what does not fit gets faked. **Never block a capture**, because an app that says no to a man alone in a field with no signal is an app that gets worked around. And **pay technicians on how the record was made, not on how clean it comes back.** Pay a bonus for clean captures, and he will simply stop reporting the problems he finds.
