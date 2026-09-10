@@ -13,13 +13,11 @@ I'm sharing it because I think the choices are more revealing than the design. A
 
 ---
 
-## How to read the status labels
+## A note on how these are written
 
-| Label | Meaning |
-|---|---|
-| **DECIDED** | Locked. In the submission. |
-| **LEANING** | This is where I'd go, but I'd want a conversation with the field team first. |
-| **OPEN** | I don't have enough information yet. Listed honestly rather than guessed at. |
+Every decision in this document is mine to make. None of them are locked until I say so.
+
+Each one is written the same way: the question, the options I weighed, what I'd lean towards, and — the part that matters — what that choice costs me.
 
 ---
 ---
@@ -127,11 +125,11 @@ Two things I take from this:
 ## Group A — What we're actually optimising for
 
 ### D1. What's the one number we're trying to move?
-**Status: LEANING**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** The brief lists four problems — area variance, settlement disputes, wrong input allocation, bad yield forecasts. I can't chase all four. Which one is the headline?
 
-**My call:** Cut the gap between contracted area and actual cultivated area from **15-25% down to under 5%.**
+**What I'd recommend:** Cut the gap between contracted area and actual cultivated area from **15-25% down to under 5%.**
 
 **Why:** It's the only one in the list that's a *cause*. The other three are symptoms of it. Fix the area number and disputes, input waste and yield forecasts all improve without being worked on separately. It's also the one the brief gives us a hard current number for, which means it's already being measured and someone already cares.
 
@@ -142,11 +140,11 @@ Two things I take from this:
 ---
 
 ### D2. Whose time do we protect?
-**Status: DECIDED**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** The technician uses the app. The agri-company pays for it. When their interests pull apart — and they do, constantly, because the company always wants one more field, one more photo, one more confirmation — who wins?
 
-**My call:** The technician's time wins. Every time.
+**What I'd recommend:** The technician's time wins. Every time.
 
 **Why:** The company can't get its accurate data without the technician, and the technician has a completely free and invisible way to opt out — guess the boundary and move on. Nobody will catch him for weeks. So any feature that costs him time without visibly helping him is a feature that gets worked around, and every workaround poisons the data.
 
@@ -159,7 +157,7 @@ I'd rather have five fields captured honestly than eight captured under pressure
 ## Group B — The field method
 
 ### D3. How do we actually capture the boundary?
-**Status: LEANING — this is the biggest call in the whole thing**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** Six visits per farmer per season. What physically happens at each one?
 
@@ -194,11 +192,11 @@ Most flexible. But it hands a judgement call to someone the brief describes as h
 ---
 
 ### D4. What GPS accuracy is good enough — and what happens when it isn't?
-**Status: LEANING**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** A mid-range Android phone knows where it is to within about 3 to 10 metres on a good day. Under trees, near a wall, or on a cloudy morning, worse. What's acceptable?
 
-**My call:** Different standards for different visits, because the visits carry different consequences.
+**What I'd recommend:** Different standards for different visits, because the visits carry different consequences.
 
 | Visit | How accurate it must be | Why |
 |---|---|---|
@@ -218,11 +216,11 @@ Instead: save it, mark it clearly as low-accuracy, show him what's wrong in plai
 ---
 
 ### D5. Does the farmer confirm the boundary on the spot?
-**Status: LEANING — yes**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** After the boundary is captured, does the farmer see it and agree to it before the technician leaves?
 
-**My call:** Yes. He sees the shape and the area on screen, and confirms — with his signature on the screen, plus a photo of him standing at the plot.
+**What I'd recommend:** Yes. He sees the shape and the area on screen, and confirms — with his signature on the screen, plus a photo of him standing at the plot.
 
 **Why:** Look at where disputes actually happen. Not at capture time — five months later, at settlement, when there's money on the table and the farmer says "that was never my land." At that point it's your technician's word against his, and you always lose that argument, because he was there and your technician has since visited four hundred other farms.
 
@@ -235,11 +233,11 @@ Sixty seconds of confirmation at capture time is the cheapest dispute prevention
 ## Group C — Scope
 
 ### D6. Which of the six stages ship first?
-**Status: OPEN — need to decide**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** Build all six lifecycle stages for launch, or start narrower?
 
-**Where I'm leaning:** Build the machinery for all six, but switch on three at launch — **onboarding, sowing, and post-harvest.**
+**What I'd recommend:** Build the machinery for all six, but switch on three at launch — **onboarding, sowing, and post-harvest.**
 
 **Why those three:** They're the three where money changes hands. Onboarding writes the contract. Sowing decides seed reconciliation and whether the contract gets amended. Post-harvest decides what the farmer is actually paid. The other three — germination, pest, pre-harvest — are about forecasting and intervention. Enormously valuable, but nobody's payment is blocked on them.
 
@@ -250,11 +248,11 @@ Starting with the three money stages also gives the cleanest possible proof: con
 ---
 
 ### D7. Six different screens, or one screen with settings?
-**Status: LEANING — one, with settings**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** Do I build six separate capture flows, one per stage? Or one capture flow that behaves differently depending on which visit it is?
 
-**My call:** One flow. What changes per stage is just settings — how accurate it needs to be, whether a photo is required, what it compares itself against, what warnings it raises.
+**What I'd recommend:** One flow. What changes per stage is just settings — how accurate it needs to be, whether a photo is required, what it compares itself against, what warnings it raises.
 
 **Why:** Three reasons.
 
@@ -269,16 +267,28 @@ And it means the same code is used six times a season instead of six pieces of c
 ---
 
 ### D8. Are we building it or buying it?
-**Status: OPEN**
+**Status: YOUR CALL — not decided yet**
 
-Mapping, offline maps, storing shapes, satellite imagery — all of this can be bought. One line in the submission, but worth having a position on. I need to understand what already exists in the company's stack before I answer this.
+**The question:** Maps, offline map storage, satellite imagery, storing and comparing shapes — all of this can be bought off the shelf. What do we build ourselves?
+
+**What I'd recommend:** Buy the map and the imagery. Build the capture and the rules.
+
+Buy: the map that works without signal, the satellite pictures, the machinery for storing and comparing shapes.
+
+Build: everything the technician touches, and every rule about what's acceptable.
+
+**Why:** Nobody is going to pay us for having drawn a map. The thing that's actually ours — the thing a competitor can't buy — is knowing that a sowing visit needs to take under three minutes, that you never block a technician in a field, and that a 25% gap needs a photo and a reason. That's the product. The map underneath it is a commodity and we should treat it like one.
+
+**What I'm giving up:** We're dependent on someone else's pricing and someone else's uptime for the map layer, and switching later is painful. Worth it — building our own offline mapping would eat the first six months and we'd end up with a worse version of something that already exists.
+
+**Caveat I'd want to close:** if the company already has a mapping stack in place, this decision changes. I'd check that before spending a rupee.
 
 ---
 
 ## Group D — Trust, conflict and authority
 
 ### D9. When the sown area doesn't match the contracted area, who decides what happens?
-**Status: OPEN — commercial call, I'd want the business in the room**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** Contract says 5 acres. Technician measures 3.8 acres sown. Now what? Does the contract change automatically?
 
@@ -298,13 +308,13 @@ Under 5%, accept it — that's measurement noise. Between 5% and 20%, raise it f
 ---
 
 ### D10. Two technicians capture the same plot. What happens?
-**Status: LEANING**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** The brief tells us technicians often visit clubs together. So two people capturing the same farm on the same day is not an edge case, it's a Tuesday.
 
 **Why this is harder than it looks:** With text, when two people edit the same thing you can often merge it. With a shape on a map, you can't. Two boundaries for the same field aren't merged into a truer boundary — you just get a third shape that nobody walked.
 
-**My call:** Keep both. Don't pick a winner automatically. Show them both to a supervisor with who captured them, when, how accurate each was, and how far apart they are, and let a person decide.
+**What I'd recommend:** Keep both. Don't pick a winner automatically. Show them both to a supervisor with who captured them, when, how accurate each was, and how far apart they are, and let a person decide.
 
 **Why:** Falls straight out of the rule in 1.1 — we never overwrite. The common shortcut is "whichever synced last wins," which quietly means "whoever got to WiFi first is right." That's not a rule, that's a coin toss with extra steps.
 
@@ -313,13 +323,13 @@ Under 5%, accept it — that's measurement noise. Between 5% and 20%, raise it f
 ---
 
 ### D11. Can a technician fake a capture from the office?
-**Status: LEANING**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** How much do we design against someone gaming this?
 
 I want to be careful about tone here. The point isn't that technicians are dishonest. It's that we're about to give a person twenty farms a day and six hours to do it in, and if the honest path doesn't fit in the day, we've *designed* the shortcut. That's on the product, not on him.
 
-**My call:** Make honest capture the fastest path (that's what D3 is for), and add light checks that cost the technician nothing:
+**What I'd recommend:** Make honest capture the fastest path (that's what D3 is for), and add light checks that cost the technician nothing:
 - Photos carry their own location and time, so a photo taken at the office doesn't match a boundary claimed in a village
 - A walked boundary leaves a walking pattern — real walking has a rhythm, a finger drawing on a screen doesn't
 - Every so often, compare the captured shape against the satellite image. Not precise enough to verify a boundary, but very good at catching a field that isn't a field
@@ -332,26 +342,37 @@ I want to be careful about tone here. The point isn't that technicians are disho
 ## Group E — The practical stuff
 
 ### D12. What gets downloaded before a day with no signal?
-**Status: OPEN — I need real numbers before I can answer this**
+**Status: YOUR CALL — not decided yet**
 
 **The question:** The technician syncs at home in the morning and then has no connectivity all day. What has to be on the phone?
 
 **The tension:** Download everything and you've got a mid-range phone with limited storage and a sync that takes twenty minutes on a slow home connection — so it gets skipped. Download too little and he hits a farm he can't work on, and the whole day's plan collapses.
 
-**Where I'm leaning:** Today's route plus a buffer. Everything for the farmers scheduled today, plus the rest of their clubs in case the day changes, plus map imagery for that area only.
+**What I'd recommend:** Today's club, plus the next club, plus map pictures for that village only. One button, done the night before.
 
-**What I need to know before deciding properly:** how big the map tiles actually are for a village-sized area, what storage a typical technician's phone really has free, and what a realistic home internet speed is. These are answerable numbers and I'd rather ask than guess. Also worth checking: how often does a day's plan actually change once he's out there? If it's rare, the buffer is waste. If it's constant, the whole idea of pre-loading a route is wrong.
+Specifically what goes on the phone:
+- Every farmer in today's club — name, contract, plot, phone number
+- Their saved boundary from onboarding, and every capture since
+- Any open flags from last visit, so he isn't surprised
+- Satellite pictures for that village at the zoom levels he'll actually use — not the whole district
+- Tomorrow's club too, as a buffer
+
+**The one design decision that matters more than the list:** the download happens **the night before, not in the morning.** At 6:30 AM he wants to leave, and a progress bar is the enemy. At 9 PM he's at home on WiFi with his phone charging and nothing to do. Same download, completely different experience — and a much higher chance it actually happens.
+
+**What I'm giving up:** If the day changes completely — he gets redirected to a different village — the buffer doesn't cover it and he's stuck. I'm accepting that, because it should be rare, and the alternative is downloading the whole district every night.
+
+**Numbers I've assumed and would check on day one:** how big the map pictures actually are for one village, how much free space is really on these phones, and what home internet speed looks like. If any of those are worse than I think, the buffer is the first thing to go.
 
 ---
 
 ### D13. Is a Club a real thing in the system, or just a way of grouping farmers?
-**Status: LEANING — a real thing**
+**Status: YOUR CALL — not decided yet**
 
 *(Plainly: does the system store a Club as its own record with its own history and its own numbers — or is "club" just a label on each farmer that you can filter a list by?)*
 
 **Why it matters:** If it's just a label, you can sort farmers by club and that's all. If it's a real record, a club can have its own visit, its own progress, its own totals, its own history — and you can compare clubs against each other.
 
-**My call:** Real record.
+**What I'd recommend:** Real record.
 
 **Why:** Because the brief keeps describing the *work* as club-shaped, not farmer-shaped. Technicians visit clubs together. A club is 15-25 farmers, which is roughly a day. The whole rhythm of the job is "today I'm doing this club" — so the app should be built around a club visit, not around 20 unrelated farm visits that happen to be near each other.
 
@@ -362,11 +383,22 @@ And it opens up things you can't do otherwise: this club has sown 80% of contrac
 ---
 
 ### D14. Language and training
-**Status: OPEN**
+**Status: YOUR CALL — not decided yet**
 
-The brief says basic smartphone literacy and limited training budget. My instinct: the app should be learnable in under thirty minutes, mostly by pictures rather than words, with spoken notes instead of typed ones — typing on a phone in a field, in the sun, in a local language, is genuinely painful and nobody will do it.
+**The question:** The brief says basic smartphone literacy and limited training budget. What does that force?
 
-What I can't decide yet: how many languages at launch. That depends entirely on where this rolls out first, and I don't know that.
+**What I'd recommend:** The app has to be learnable in under thirty minutes, by watching someone do it once.
+
+Which means, concretely:
+- **Pictures before words.** Every action has an icon that means something on its own. Words are the label, not the instruction.
+- **Numbers big.** The area is the point. It should be the largest thing on the screen, always.
+- **Spoken notes, not typed ones.** Typing on a phone, in the sun, in a local language, with a farmer waiting — nobody will do it. Hold a button and talk. Two seconds versus two minutes.
+- **Two languages at launch:** the local language of the first region, and English for the office. Not more. Every extra language is a translation to maintain and a place for the meaning to drift.
+- **No settings screen.** A settings screen is a place for the app to get broken by its own user. Anything that needs configuring gets configured by the office, not in the field.
+
+**Why:** The training budget being small isn't a constraint to work around, it's a design brief. If the app needs training, the app is wrong. Twenty farmers a day means the technician does this four hundred times a month — he'll learn it by repetition or not at all, and only if it's simple enough to learn by repetition.
+
+**What I'm giving up:** Icon-led design with few words means some things will be ambiguous the first time, and I'll only find out which ones by watching people. I'd want to sit with five technicians and a paper version before writing any code.
 
 ---
 ---
