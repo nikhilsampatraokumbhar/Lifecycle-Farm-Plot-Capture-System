@@ -15,6 +15,7 @@ SECTIONS = [
     ('03-downstream.md', 'What the data is worth'),
     ('04-plan.md',       'What I would build first'),
 ]
+# 05-decisions.md is the supporting note, sent alongside rather than inside
 CHROME = "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"
 
 def run(md, title):

@@ -21,6 +21,15 @@ def to_html(md_path, out_path, title):
     extra = ROOT / 'assets' / 'log.css'
     if 'decision-log' in str(md_path) and extra.exists():
         css += '\n' + extra.read_text()
+    if '05-decisions' in str(md_path):
+        css += '''
+@media print{
+  body{font-size:10.4px;line-height:1.62}
+  p{margin:0 0 10px}
+  h4{font-size:10.6px;color:#0A4F2C;margin:16px 0 8px;letter-spacing:.04em;
+     text-transform:uppercase;border-bottom:1px solid #CDD2C7;padding-bottom:3px}
+  h3{font-size:12px;margin:2px 0 10px}
+}'''
     html = (f"<title>{title}</title>\n<style>\n{css}\n</style>\n"
             f'<div class="sheet">\n{body}\n</div>\n')
     pathlib.Path(out_path).write_text(html)

@@ -87,6 +87,10 @@ function convert(md) {
 
     if (!line.trim()) { i++; continue; }
 
+    if (line.trim() === '<div class="pagebreak"></div>') {
+      out.push(new Paragraph({ children: [new PageBreak()] })); i++; continue;
+    }
+
     if (line.trim() === '---') {
       out.push(new Paragraph({ text: '', border: { bottom: { style: BorderStyle.SINGLE, size: 6, color: 'C9CDC3' } },
                                spacing: { before: 120, after: 160 } }));
@@ -148,8 +152,8 @@ function convert(md) {
 const LOG_MODE = process.argv[2] === 'log';
 const children = [];
 function buildLog() {
-  children.push(...convert(fs.readFileSync(path.join(REPO, 'docs', 'decision-log.md'), 'utf8')));
-  const out = path.join(REPO, 'build', 'Lifecycle-Farm-Plot-Capture-DECISION-LOG.docx');
+  children.push(...convert(fs.readFileSync(path.join(ROOT, '05-decisions.md'), 'utf8')));
+  const out = path.join(REPO, 'build', 'Lifecycle-Farm-Plot-Capture-DECISIONS.docx');
   const doc = new Document({
     numbering: { config: [{ reference: 'nums', levels: [{ level: 0, format: 'decimal', text: '%1.', alignment: AlignmentType.START }] }] },
     styles: { default: {
