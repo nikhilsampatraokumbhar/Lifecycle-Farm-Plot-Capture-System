@@ -45,3 +45,17 @@ No decision goes in the log without a line saying what I gave up to make it. A c
 ## 6. Page budget is real.
 
 Max 15 pages including screens. If screens go one-per-page they eat the whole document. So screens go 3-4 to a page. The budget is in the decision log and I hold to it.
+
+## 7. Plain headings. No essay titles.
+
+A heading should say what the section is, and stop.
+
+Not *"The six stages, and what each one is really for."* Just **"The six stages."** Not *"A note on the decisions."* Just **"The decision log."** The trailing clause is a writer being pleased with himself, and it is the fastest way to sound like someone else wrote this.
+
+Same test as rule 1: if I would not type it into a document at work, it does not go in.
+
+## 8. No British phrasing.
+
+"Twenty to seven in the morning" is 6:40. "A fortnight" is two weeks. "Marking its own homework" is checking its own work.
+
+These slip in because they read nicely. They are also words I do not use, and one of them in an interview is enough to make the whole thing sound borrowed.

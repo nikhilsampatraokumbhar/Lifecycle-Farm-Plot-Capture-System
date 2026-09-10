@@ -6,15 +6,15 @@
 
 ---
 
-## Six moments that decide whether the day works
+## Six moments that matter
 
-### 1 · The night before, 9:10 pm. The most important moment is not in the field.
+### 1 · 9:10 pm the night before. The download.
 
 The app asks one thing while he is at home with his phone charging: *tomorrow is Bhagwati Club, 20 farmers, download now?* One tap, four minutes, done while he eats.
 
-**Why not the morning?** At 6:40am he wants to be on his bike, and a progress bar is something to skip. At 9pm he has nothing else to do. Same download, completely different chance of it happening. **If this did not happen, nothing else in this document matters**, so a missed download shows as a red screen in the morning, not a warning.
+**Why not the morning?** At 6:40 in the morning he wants to be on his bike, and a progress bar is something he will skip. At 9pm he has nothing else to do. Same download, completely different chance of it happening. **If this did not happen, nothing else in this document matters**, so a missed download shows as a red screen in the morning, not a warning.
 
-In the morning he gets a verdict, not a checklist: **Ready. 20 farmers. Everything downloaded.**
+In the morning he gets one line, not a checklist: **Ready. 20 farmers. Everything downloaded.**
 
 ### 2 · 7:34 am. The plan is already wrong.
 
@@ -24,7 +24,7 @@ He taps the three who are away. They drop to the bottom, the order reshuffles, t
 
 **I originally designed a clever route planner here and cut it.** The plan made at 9pm survives about four minutes of contact with the village. What he needs is not a better plan, it is **a plan that is cheap to change**. The club leader already knows who is home, so the app should ask him rather than out-guess him.
 
-### 3 · 7:43 am. One question, and most of the time one tap.
+### 3 · 7:43 am. One question, usually one tap.
 
 Suresh Jadhav. Contract 2.4 acres, cotton, boundary walked on 12 November. The app asks him one thing, in words, big:
 
@@ -46,7 +46,7 @@ He is not doing arithmetic next week in an office. He knows now, standing in the
 
 The gap is over 20%, so the app asks for a reason. Six icons, one tap: **no water**. Two photos, which carry their own time and place. Then he holds a button and says eight seconds of Marathi, because typing that sentence in the sun with a farmer waiting takes two minutes and would happen exactly once.
 
-### 5 · 7:52 am. The phone turns around.
+### 5 · 7:52 am. The farmer signs.
 
 Suresh sees his own field, the shape and the number, in Marathi. He signs with his finger. A photo of him standing at his plot.
 
@@ -56,7 +56,7 @@ The quieter effect is probably the bigger one: **if the farmer is watching, the 
 
 Saved. *19 farmers left, about 3 hours.* **Total for a difficult farmer: 3 minutes 40 seconds.**
 
-### 6 · 8:34 pm, back on WiFi. The day goes home.
+### 6 · 8:34 pm. Sending the day.
 
 Twenty captures, one tap. **Details go first, photos follow**, because photos are large and if a record needed its photos to count, one weak connection would hold up all twenty. *18 sent. 2 waiting for a better connection. Nothing is lost.*
 
@@ -97,7 +97,7 @@ The brief calls this a club visit, and the app should treat it as one thing rath
 
 ---
 
-## What writing the day out hour by hour taught me
+## What this told me
 
 **The most important moment of a field day is not in the field.** It is the download the night before, and everything else rests on it.
 

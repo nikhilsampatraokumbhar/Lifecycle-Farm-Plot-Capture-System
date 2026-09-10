@@ -15,7 +15,7 @@ Everything else follows from those two: never block a technician standing in a f
 
 ---
 
-## The problem, in three numbers
+## The problem
 
 | | |
 |---|---|
@@ -27,23 +27,23 @@ The area gap is the one worth chasing, because the other three problems in the b
 
 ---
 
-## The two ideas everything else rests on
+## The two main ideas
 
-### 1 · A plot is not a shape. It is a shape with a history.
+### 1 · A plot keeps a history
 
 Every visit adds a record. Old records are never edited or deleted. A wrong capture gets a correction added beneath it, not applied to it.
 
 It sounds almost too simple to be a design decision, but it is the reason the hard questions have answers. Contracted against sown is two records side by side. A dispute five months later is a dated, photographed, signed history. Two technicians capturing the same plot is not a conflict to resolve in software, it is two records and a person deciding. At settlement, an overwritten record proves nothing.
 
-### 2 · Everything has to fit inside eleven minutes.
+### 2 · Everything has to fit inside eleven minutes
 
 Not as a target. As the constraint that decides what gets built.
 
-Anything that does not fit in the day does not get done, it gets faked, and a faked capture is worse than no capture because it is wrong **and** it looks official. So the design earns the technician's time rather than spending it: walk once and then mark only the difference, one tap for the farmer who sowed everything, a spoken note instead of a typed one, and a download that happens at nine at night rather than twenty to seven in the morning.
+Anything that does not fit in the day does not get done, it gets faked, and a faked capture is worse than no capture because it is wrong **and** it looks official. So the design earns the technician's time rather than spending it: walk once and then mark only the difference, one tap for the farmer who sowed everything, a spoken note instead of a typed one, and a download that happens at nine at night rather than at 6:40 in the morning.
 
 ---
 
-## What is in here
+## Contents
 
 | | Page |
 |---|---|
@@ -51,19 +51,19 @@ Anything that does not fit in the day does not get done, it gets faked, and a fa
 | **The screens** · fifteen, covering that day end to end | 5 |
 | **How it works underneath** · syncing, accuracy, disputes, the data model, planning the month | 9 |
 | **What the data is worth after the visit** · seven uses of the same record | 14 |
-| **What I would build first, and what I would not build at all** | 15 |
+| **What I would build first** · the plan, the numbers, and how technicians get paid | 15 |
 
 
 ---
 
-## A note on the decisions
+## The decision log
 
 This document is the answer. The choices behind it are recorded separately, in a companion decision log: sixteen decisions, the options weighed against each other, the call, and **what each one cost.** No decision is recorded without the thing it gave up, because a choice with no downside is not a choice, it is a preference.
 
 Three of the fifteen, as a sample of the kind of call being made:
 
-**Walk the boundary once, then never again.** Costs a slow, strict onboarding visit, and means one bad baseline capture corrupts a farmer's whole season. Bought back every fortnight for the rest of the year.
+**Walk the full boundary only once, at the start. After that, only mark what changed.** Costs a slow and strict onboarding visit, and means one bad first capture spoils a farmer's whole season. Pays that back at every visit for the rest of the year.
 
-**Small area gaps pass, medium ones go to a supervisor, large ones freeze input release.** Automatic amendment would hand legally binding authority to a GPS reading and an unsupervised person in a field. Reviewing everything would create three hundred tasks a month and be rubber-stamped inside a fortnight.
+**Small area gaps pass, medium ones go to a supervisor, large ones freeze input release.** Automatic amendment would hand legally binding authority to a GPS reading and an unsupervised person in a field. Reviewing everything would create three hundred tasks a month, and they would be rubber-stamped within two weeks.
 
 **Buy the map, build the rules.** Nobody pays us for having drawn a map. And crops do not wait: buying puts us in a real field in three months, building puts us there in twelve, and missing a sowing window costs a year rather than a quarter.

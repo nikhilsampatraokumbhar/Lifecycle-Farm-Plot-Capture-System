@@ -14,7 +14,7 @@ That single choice removes most of what makes offline systems hard. No merging, 
 
 {{fig:sync}}
 
-**One thing about duplicates that matters more than it sounds.** The common failure here is not a lost record, it is a record that arrived while the acknowledgement got lost coming back. The phone will send it again, so the server has to shrug at an ID it has already seen.
+**One thing about duplicates that matters more than it sounds.** The common failure here is not a lost record, it is a record that arrived while the acknowledgement got lost coming back. The phone will send it again, so the server has to ignore an ID it has already seen.
 
 **Reference data comes down the other way** (farmers, contracts, boundaries, open flags), and the phone asks only for what changed since it last asked.
 
@@ -28,7 +28,7 @@ That single choice removes most of what makes offline systems hard. No merging, 
 
 ## 2. When two technicians capture the same plot
 
-The brief says technicians often visit clubs together, so this is not a rare event. It is a Tuesday.
+The brief says technicians often visit clubs together, so this is not a rare event. It will happen most weeks.
 
 **It is not a merging problem, and treating it as one is the mistake.** So: **keep both, pick neither, ask a person.** The usual shortcut is "whichever synced last wins", which really means "whoever reached WiFi first is right". That is not a rule, it is a coin toss with extra steps.
 
@@ -81,7 +81,7 @@ So it does three useful things. It tells you **whether the field is a field**, b
 
 ---
 
-## 6. Overlapping claims, and areas that jump
+## 6. Overlapping claims, and sudden changes in area
 
 ### Two farmers claiming the same strip
 

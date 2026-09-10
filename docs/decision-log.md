@@ -1,5 +1,5 @@
 # Decision Log
-### Lifecycle Farm Plot Capture System · the thinking behind the submission
+### Lifecycle Farm Plot Capture System · the thinking behind it
 
 ---
 
@@ -13,7 +13,7 @@ I'm sharing it because I think the choices are more revealing than the design. A
 
 ---
 
-## A note on how these are written
+## How each decision is written
 
 Every decision in this document is mine to make. None of them are locked until I say so.
 
@@ -22,7 +22,7 @@ Each one is written the same way. The question, the options I weighed, what I'd 
 ---
 ---
 
-# The sixteen calls, on one page
+# All sixteen decisions on one page
 
 *If I only get five minutes, this is the page.*
 
@@ -39,7 +39,7 @@ Each one is written the same way. The question, the options I weighed, what I'd 
 | **D9** | Small gaps pass. Medium gaps go to a supervisor. Big gaps freeze input release. | Automatic is reckless, reviewing everything gets rubber-stamped. Bands put attention where the money is. |
 | **D10** | Two technicians capture the same farm: keep both, a supervisor decides. | You can't merge two shapes. "Last sync wins" is a coin toss with extra steps. |
 | **D11** | Make honest capture the fastest path, then add checks that cost the technician nothing. | If the honest path doesn't fit in the day, we designed the shortcut ourselves. |
-| **D12** | Download today's club and tomorrow's, the night before, not in the morning. | At 6:40am a progress bar gets skipped. At 9pm it doesn't. Everything else rests on this happening. |
+| **D12** | Download today's club and tomorrow's, the night before, not in the morning. | At 6:40 in the morning a progress bar gets skipped. At 9pm it doesn't. Everything else rests on this happening. |
 | **D13** | A Club is a real record with its own history, not a label on a farmer. | The work is club-shaped. An app built around scattered farm visits fights how the job works. |
 | **D14** | Two languages. Pictures before words. Spoken notes, never typed. No settings screen. | A small training budget isn't a constraint to work around, it's the design brief. |
 | **D15** | One editable source now. Package it as PDF, slides and a document only at the end. | Lock it into slides early and I start avoiding edits, which makes the document worse. |
@@ -53,9 +53,9 @@ Each one is written the same way. The question, the options I weighed, what I'd 
 ---
 ---
 
-# Part 1 · Three things I worked out before I drew anything
+# Part 1 · Three things I worked out first
 
-## 1.1 The brief hands you the answer in one line
+## 1.1 The brief gives you the answer in one line
 
 > *"Agriplotting is NOT a one-time activity."*
 
@@ -122,7 +122,7 @@ The design has to earn the technician's time, not spend it.
 
 My answer is: **walk the boundary properly once, at onboarding. After that, don't re-walk. Start from the saved boundary and only mark what changed.**
 
-Sown only two-thirds of the field? Mark the two-thirds. Pest hit one corner? Mark the corner. You're not re-measuring the farm every fortnight, you're recording the difference.
+Sown only two-thirds of the field? Mark the two-thirds. Pest hit one corner? Mark the corner. You're not re-measuring the farm every two weeks, you're recording the difference.
 
 That takes a 12-minute job down to about 2-3 minutes, and it fits in the day. Full reasoning in decision **D3**.
 
@@ -223,7 +223,7 @@ Most flexible. But it hands a judgement call to someone the brief describes as h
 **Why Option 3:**
 
 - It's the only one that survives the workload math
-- It matches how the farm actually behaves. The field's outer edge doesn't move during the season, what changes is *how much of it is being used.* So re-measuring the outer edge every fortnight is measuring the thing that didn't change
+- It matches how the farm actually behaves. The field's outer edge doesn't move during the season, what changes is *how much of it is being used.* So re-measuring the outer edge every two weeks is measuring the thing that didn't change
 - It makes the comparison view almost free. You're literally always working on top of the previous boundary, so "sown area vs contracted area" is on screen without anyone asking for it
 - It concentrates the expensive, careful work at onboarding, which is exactly where you want it, because that's the number the contract is written against
 
@@ -233,7 +233,7 @@ Most flexible. But it hands a judgement call to someone the brief describes as h
 - It's a harder idea to explain in one line than "walk around your field," which has a real training cost
 
 
-**How I'd explain it in the room:** *“It's arithmetic. Two visits a month across two hundred farmers is fifteen to twenty farms a day, about eleven minutes a farmer. Walking the boundary of a ten-acre plot takes sixteen to eighteen minutes on its own. So walking every visit doesn't fit in the day, and what doesn't fit in the day gets faked. Besides, the outer edge of a field doesn't move during the season. What changes is how much of it is being used. Re-walking the outer edge every fortnight is measuring the thing that didn't change.”*
+**How I'd explain it in the room:** *“It's arithmetic. Two visits a month across two hundred farmers is fifteen to twenty farms a day, about eleven minutes a farmer. Walking the boundary of a ten-acre plot takes sixteen to eighteen minutes on its own. So walking every visit doesn't fit in the day, and what doesn't fit in the day gets faked. Besides, the outer edge of a field doesn't move during the season. What changes is how much of it is being used. Re-walking the outer edge every two weeks is measuring the thing that didn't change.”*
 
 ---
 
@@ -379,7 +379,7 @@ Build: everything the technician touches, and every rule about what's acceptable
 
 **Automatic.** Clean data, no backlog, fast. But it hands legally binding commercial authority to a GPS reading and an unsupervised person in a field. One bad capture and a farmer's contract silently changes. I don't think anyone signs off on this, and I don't think they should.
 
-**Always a person checks.** Safe, easy to explain. But it creates a review task on nearly every visit. That's 300-400 a month per technician's book. It'll be rubber-stamped within a fortnight, which is worse than not having it, because now there's a fake approval on the record.
+**Always a person checks.** Safe, easy to explain. But it creates a review task on nearly every visit. That's 300-400 a month per technician's book. It will be rubber-stamped within two weeks, which is worse than not having it, because now there's a fake approval on the record.
 
 **Banded. Small gaps pass, medium gaps go to a person, large gaps freeze things.** ← where I lean
 Under 5%, accept it. That's measurement noise. Between 5% and 20%, raise it for a supervisor with the photos and the map attached. Over 20%, or if the sown area is somehow *bigger* than the contracted area, flag it hard and hold input disbursement until someone looks.
@@ -389,7 +389,7 @@ Under 5%, accept it. That's measurement noise. Between 5% and 20%, raise it for 
 **What I'm giving up:** Those thresholds are guesses. 5% and 20% sound reasonable but I made them up. They need to be tuned against real captures, and I'd want to run the system in observe-only mode for a season before letting it hold anyone's fertiliser.
 
 
-**How I'd explain it in the room:** *“Both obvious answers fail. Automatic hands legally binding commercial authority to a GPS reading and an unsupervised person in a field. Reviewing everything creates three to four hundred tasks a month per technician's book, which gets rubber-stamped inside a fortnight, and a fake approval on the record is worse than no approval. Banding puts human attention only where real money is at risk, so the queue stays small enough that people actually read it.”*
+**How I'd explain it in the room:** *“Both obvious answers fail. Automatic hands legally binding commercial authority to a GPS reading and an unsupervised person in a field. Reviewing everything creates three to four hundred tasks a month per technician's book, which gets rubber-stamped within two weeks, and a fake approval on the record is worse than no approval. Banding puts human attention only where real money is at risk, so the queue stays small enough that people actually read it.”*
 
 ---
 
@@ -462,7 +462,7 @@ Specifically what goes on the phone:
 **Numbers I've assumed and would check on day one:** how big the map pictures actually are for one village, how much free space is really on these phones, and what home internet speed looks like. If any of those are worse than I think, the buffer is the first thing to go.
 
 
-**How I'd explain it in the room:** *“At twenty to seven in the morning he wants to be on his bike, and a progress bar is something to skip. At nine at night he's at home with his phone charging and nothing to do. Same download, completely different chance of it actually happening. And if that download didn't happen, nothing else in the design matters. The entire offline day rests on it.”*
+**How I'd explain it in the room:** *“At 6:40 in the morning he wants to be on his bike, and a progress bar is something he will skip. At nine at night he's at home with his phone charging and nothing to do. Same download, completely different chance of it actually happening. And if that download didn't happen, nothing else in the design matters. The entire offline day rests on it.”*
 
 ---
 
@@ -534,7 +534,7 @@ Which means, concretely:
 
 **Three things make it hold up.**
 
-**An unannounced supervisor re-walk on a random 3 to 5% of plots.** Without one independent measurement, every signal above is the phone marking its own homework. The sample does not need to be large, but it must be random, and he has to know it exists.
+**An unannounced supervisor re-walk on a random 3 to 5% of plots.** Without one independent measurement, every signal above is the phone checking its own work. The sample does not need to be large, but it must be random, and he has to know it exists.
 
 **His score must never depend on his farmers' behaviour.** If a farmer sowed 60% because his borewell failed, that is not the technician's doing. Any measure that mixes the two pushes technicians towards easy farmers and easy villages, and the difficult villages are exactly where we need the data.
 
@@ -549,9 +549,9 @@ Which means, concretely:
 ---
 ---
 
-# Part 3 · What I am deliberately NOT building, and why
+# Part 3 · What I am not building, and why
 
-I think this list matters as much as the design. Anything can be added to a product. Deciding what stays out is the harder half of the job.
+I think this list matters as much as the design. Anything can be added to a product. Deciding what stays out is the harder part of the job.
 
 | Not building | Why not |
 |---|---|
@@ -580,7 +580,7 @@ Not vanity numbers. Numbers that would tell me to stop and change something.
 - Share of captures flagged as low quality: if this climbs, either the accuracy rules are too strict or something in the field has changed
 
 **The one that tells the truth:**
-- Are technicians still using it in month four? Adoption at launch means nothing. Everyone uses a new tool for a fortnight. Month four is the honest test.
+- Are technicians still using it in month four? Adoption at launch means nothing. Everyone uses a new tool for the first two weeks. Month four is the honest test.
 
 ---
 
@@ -631,7 +631,7 @@ If a sentence in the submission can't be said out loud in a meeting without soun
 
 ---
 
-# Part 7 · One more decision, about the submission itself
+# Part 7 · One more decision, about the submission
 
 ### D15. What form does the submission take?
 **Status: DECIDED**

@@ -1,4 +1,4 @@
-# What I would build first, and what I would not build at all
+# What I would build first
 
 ## The plan
 
@@ -25,7 +25,7 @@
 | Captures synced within 24 hours | If this falls the evening sync is too painful, and needs fixing rather than enforcing |
 | Share of captures flagged low quality | Climbing means the thresholds are wrong, or something changed in the field |
 
-**And the one that tells the truth: are technicians still using it properly in month four?** Adoption at launch means nothing, since everyone uses a new tool for a fortnight. Measured by time-per-plot and share walked rather than drawn, not by logins.
+**And the one that tells the truth: are technicians still using it properly in month four?** Adoption at launch means nothing, since everyone uses a new tool for the first two weeks. Measured by time-per-plot and share walked rather than drawn, not by logins.
 
 ---
 
@@ -38,7 +38,7 @@
 
 {{fig:incentives}}
 
-**An unannounced supervisor re-walk on a random 3 to 5% of plots is the anchor.** Without one independent measurement, every other signal is the phone marking its own homework, and he needs to know the sample exists.
+**An unannounced supervisor re-walk on a random 3 to 5% of plots is the anchor.** Without one independent measurement, every other signal is the phone checking its own work, and he needs to know the sample exists.
 
 **His score must never depend on his farmers' behaviour.** If it does he will avoid the difficult villages, and those are exactly where the data matters most.
 
@@ -46,9 +46,9 @@
 
 ---
 
-## The two other things that would kill this
+## Two other risks
 
-*The first is a technician working around the app, which the eleven minute budget and the pay structure above both exist to prevent.*
+*The first is a technician working around the app. The eleven minute budget and the pay structure above both exist to prevent it.*
 
 **The baseline turns out to be wrong.** Everything sits on the onboarding walk, so one bad capture corrupts a farmer's whole season. Mitigated by stricter onboarding rules, the same supervisor sample, and an explicit path to re-measure a farm when a boundary genuinely changes.
 

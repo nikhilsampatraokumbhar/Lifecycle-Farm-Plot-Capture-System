@@ -1,4 +1,4 @@
-## The six stages, and what each one is really for
+## The six stages
 
 A stage is not a feature. It is a set of rules the same capture screen reads: how accurate it has to be, whether a photo is required, what it compares itself against, and what it should warn about. Adding a seventh stage is a row in a table, not a development project.
 
@@ -21,7 +21,7 @@ Those three also give the cleanest possible proof in a single season: contracted
 
 ---
 
-## Five rules the design holds to
+## Five design rules
 
 **Never block him.** Weak GPS, farmer not home, dead battery, overlapping claim: in every case the app records honestly and lets him carry on. An app that says no to a man alone in a field with thirteen farmers left is an app that gets worked around.
 
@@ -35,13 +35,13 @@ Those three also give the cleanest possible proof in a single season: contracted
 
 ---
 
-## Every constraint in the brief, and what it forced
+## The constraints, and what each one changed
 
 Listing them is easy. What matters is that each one changed something.
 
 | The constraint | What it forced in the design |
 |---|---|
-| No connectivity in the field | Everything works offline, and the download happens at nine at night rather than twenty to seven in the morning |
+| No connectivity in the field | Everything works offline, and the download happens at nine at night rather than at 6:40 in the morning |
 | Mid-range Android, no external GPS | Accuracy standards written as how much area error we can live with, then worked backwards from plot size |
 | Basic smartphone literacy, limited training | One capture screen for all six stages, pictures before words, spoken notes instead of typed ones |
 | Plots from 0.5 to 10 acres, irregular shapes | A flat accuracy number is wrong across that range, because a small plot is almost all edge |
@@ -53,9 +53,9 @@ Listing them is easy. What matters is that each one changed something.
 
 ---
 
-## What I am deliberately not building
+## What I am not building
 
-Anything can be added to a product. Deciding what stays out is the harder half.
+Anything can be added to a product. Deciding what stays out is the harder part.
 
 | Not building | Why not |
 |---|---|
