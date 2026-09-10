@@ -22,6 +22,36 @@ Each one is written the same way: the question, the options I weighed, what I'd 
 ---
 ---
 
+# The fifteen calls, on one page
+
+*If I only get five minutes, this is the page.*
+
+| # | The call I made | In one line, why |
+|---|---|---|
+| **D1** | Get the gap between contracted and actual area from 15–25% down to under 5%. Watch time-per-plot so it doesn't get worse. | The other three problems are symptoms of this one. |
+| **D2** | When the company's data needs and the technician's time collide, his time wins. | He can opt out invisibly, and a worked-around app produces data that's confidently wrong. |
+| **D3** | Walk the boundary properly once, at onboarding. After that, never re-walk — only mark what changed. | Walking every visit doesn't fit in the day, and what doesn't fit in the day gets faked. |
+| **D4** | Different accuracy standards per visit. Never block a capture — save it, flag it, let the office check. | An app that says no to a man alone in a field with no signal is an app that gets worked around. |
+| **D5** | The farmer sees the shape and the number in his own language and signs, there and then. | Sixty seconds now prevents the dispute that happens five months later with money on the table. |
+| **D6** | Build for all six stages. Switch on three at launch — onboarding, sowing, post-harvest. | Those are the three where money changes hands. The rest are forecasting. |
+| **D7** | One capture screen. The six visits differ by a table of rules, not by six pieces of software. | It decides whether the office can add a new visit type, or whether that needs developers. |
+| **D8** | Buy the map and the satellite pictures. Build the capture, the rules and the office side. | Nobody pays us for having drawn a map. And crops don't wait — miss a sowing window and you lose a year. |
+| **D9** | Small gaps pass. Medium gaps go to a supervisor. Big gaps freeze input release. | Automatic is reckless, reviewing everything gets rubber-stamped. Bands put attention where the money is. |
+| **D10** | Two technicians capture the same farm — keep both, a supervisor decides. | You can't merge two shapes. "Last sync wins" is a coin toss with extra steps. |
+| **D11** | Make honest capture the fastest path, then add checks that cost the technician nothing. | If the honest path doesn't fit in the day, we designed the shortcut ourselves. |
+| **D12** | Download today's club and tomorrow's — the night before, not in the morning. | At 6:40am a progress bar gets skipped. At 9pm it doesn't. Everything else rests on this happening. |
+| **D13** | A Club is a real record with its own history, not a label on a farmer. | The work is club-shaped. An app built around scattered farm visits fights how the job works. |
+| **D14** | Two languages. Pictures before words. Spoken notes, never typed. No settings screen. | A small training budget isn't a constraint to work around, it's the design brief. |
+| **D15** | One editable source now. Package it as PDF, slides and a document only at the end. | Lock it into slides early and I start avoiding edits, which makes the document worse. |
+
+**The two ideas underneath all fifteen:**
+
+1. **A plot is not a shape, it's a shape with a history.** We never overwrite — every visit adds a record and the old ones stay. That one rule answers comparison, disputes, settlement and insurance all at once.
+2. **The design has to fit inside eleven minutes per farmer.** Every call above is downstream of that number. Anything that doesn't fit in the day doesn't get done — it gets faked, and faked data is worse than none.
+
+---
+---
+
 # Part 1 — Three things I worked out before I drew anything
 
 ## 1.1 The brief hands you the answer in one line
@@ -139,6 +169,9 @@ Two things I take from this:
 
 **What I'm giving up:** Leading with settlement disputes would probably get a louder "yes" from a commercial head, because disputes are painful and visible. Area variance is the less emotional pitch. I'm accepting a duller headline for a more honest one.
 
+
+**How I'd explain it in the room:** *“The other three problems in the brief are symptoms of this one. Disputes, wasted inputs, bad forecasts — they all trace back to not knowing the real area. Fix the cause and the symptoms improve on their own. It's also the only one they gave me a current number for, which tells me somebody is already measuring it and already cares.”*
+
 ---
 
 ### D2. Whose time do we protect?
@@ -155,6 +188,9 @@ Two things I take from this:
 I'd rather have five fields captured honestly than eight captured under pressure.
 
 **What I'm giving up:** Some things the company would genuinely like — richer notes, more photos, more confirmation taps — don't make it into v1. I'll have to defend that in a room where someone says "it's only ten extra seconds." Ten seconds × 20 farmers × 22 days is over an hour a month, per technician.
+
+
+**How I'd explain it in the room:** *“The technician has a free and invisible way to opt out — guess the boundary and move on, and nobody catches him for weeks. So a feature that costs him time without visibly helping him doesn't get used, it gets worked around. And a worked-around app gives you data that's confidently wrong, which is worse than no data at all.”*
 
 ---
 
@@ -195,6 +231,9 @@ Most flexible. But it hands a judgement call to someone the brief describes as h
 - If a farmer genuinely extends his field mid-season — leases the neighbouring strip — the baseline is wrong and needs a proper re-walk. I need an explicit "re-measure the whole farm" escape hatch, and I need to detect when it should be used
 - It's a harder idea to explain in one line than "walk around your field," which has a real training cost
 
+
+**How I'd explain it in the room:** *“It's arithmetic. Two visits a month across two hundred farmers is fifteen to twenty farms a day — about eleven minutes a farmer. Walking the boundary of a ten-acre plot takes sixteen to eighteen minutes on its own. So walking every visit doesn't fit in the day, and what doesn't fit in the day gets faked. Besides, the outer edge of a field doesn't move during the season. What changes is how much of it is being used. Re-walking the outer edge every fortnight is measuring the thing that didn't change.”*
+
 ---
 
 ### D4. What GPS accuracy is good enough — and what happens when it isn't?
@@ -221,6 +260,9 @@ Instead: save it, mark it clearly as low-accuracy, show him what's wrong in plai
 
 **What I'm giving up:** Some low-quality records enter the system. I'm accepting that, because the alternative isn't clean data — it's a technician who stops using the app.
 
+
+**How I'd explain it in the room:** *“He's standing in a field with no signal, no supervisor to phone, and thirteen farmers left. If the app refuses his work he has no way forward — so he learns the app is an obstacle to get around, and everything after that is worth less. Save it, label it honestly, let the office deal with it. A record with a warning on it beats no record and a technician who's stopped trusting the tool.”*
+
 ---
 
 ### D5. Does the farmer confirm the boundary on the spot?
@@ -237,6 +279,9 @@ Instead: save it, mark it clearly as low-accuracy, show him what's wrong in plai
 Sixty seconds of confirmation at capture time is the cheapest dispute prevention available. And there's a second effect that's harder to measure but probably bigger: if the farmer is watching, the technician can't fake it. This does more for data honesty than any technical check I could build.
 
 **What I'm giving up:** Sixty seconds per farmer, which is real (twenty minutes a day) and directly contradicts D2 if I'm not careful. My defence is that this one is *visibly* for the technician too — it protects him from being blamed later. And the harder problem: the farmer isn't always there. So I need a proper "farmer not present" path that doesn't just get used every time as the easy option.
+
+
+**How I'd explain it in the room:** *“The dispute doesn't happen at capture time. It happens five months later at settlement, with money on the table, when the farmer says that was never my land. At that point it's his word against a technician who's since visited four hundred farms, and you lose that argument every time. Sixty seconds now is the cheapest dispute prevention there is. And the quieter effect is probably bigger — if the farmer is watching, the capture can't be faked.”*
 
 ---
 
@@ -257,24 +302,42 @@ Starting with the three money stages also gives the cleanest possible proof: con
 
 **What I'm giving up:** The full-season story is more impressive and it's what the brief describes. I'm choosing a narrower launch that proves the model works, and I have to be able to defend that as prioritisation rather than as not finishing the assignment. That's a real risk with this call and I know it.
 
+
+**How I'd explain it in the room:** *“Those three are where money changes hands. Onboarding writes the contract, sowing decides seed reconciliation, post-harvest decides what he gets paid. The other three are forecasting — valuable, but nobody's payment is blocked on them. And starting there gives the cleanest possible proof in one season: contracted area at the start, actual area at the end, and the gap measured properly for the first time.”*
+
 ---
 
-### D7. Six different screens, or one screen with settings?
-**Status: YOUR CALL — not decided yet**
+### D7. Six different screens, or one screen that behaves differently?
+**Status: DECIDED**
 
-**The question:** Do I build six separate capture flows, one per stage? Or one capture flow that behaves differently depending on which visit it is?
+> **The call: one capture screen. What changes between the six visits is a table of rules that sits next to it, not six different pieces of software.**
 
-**What I'd recommend:** One flow. What changes per stage is just settings — how accurate it needs to be, whether a photo is required, what it compares itself against, what warnings it raises.
+**The question, properly stated:** it isn't really about screens. It's about **who gets to change the rules later — the office, or only developers.**
 
-**Why:** Three reasons.
+**Here's what that means.** All six visits do roughly the same thing: look at the field, record a shape, note what you saw, take a photo, save it. What differs between them is only the rules:
 
-The technician learns *one* thing. Given the brief explicitly says limited training budget, that alone might decide it.
+| Visit | How accurate? | Photo needed? | Compare against what? | Warn about what? |
+|---|---|---|---|---|
+| Onboarding | Strict | Yes | Nothing — it's the first | Shape doesn't close properly |
+| Sowing | Strict-ish | Only if gap over 10% | The onboarding boundary | Sown more than contracted |
+| Germination | Relaxed | Yes | The sowing boundary | Healthy area under 60% |
+| Pest / disease | Relaxed | Always | The sowing boundary | Affected area over 40% |
+| Pre-harvest | Relaxed | Yes | The last capture | Standing area dropped sharply |
+| Post-harvest | Strict | Yes | The pre-harvest boundary | Harvested more than sown |
 
-Adding stage seven, or a client-specific stage, becomes a settings change instead of a development project.
+Build **one** screen, and let it read that table. Change a rule, you change the table. The screen just does what the table says.
 
-And it means the same code is used six times a season instead of six pieces of code used once each — so bugs surface fast and get fixed once.
+**Why:**
 
-**What I'm giving up:** More work upfront than hard-coding three flows, and slower to a first demo. Also each stage's screen will be slightly less tailored than a purpose-built one. I think that's a good trade, but it is a trade.
+**The technician learns one thing, not six.** He does this four hundred times a month. The same screen, six times a season, becomes muscle memory. Six different screens means six things to remember — and the pest screen he uses twice a season is the one he'll always fumble. The brief says the training budget is limited, and that alone probably settles it.
+
+**Adding a seventh visit stops being a project.** A client asks for an irrigation check in February. With one screen and a table, someone in the office adds a row that afternoon — no developers, no release. With six built screens it's a development cycle, then pushing an app update to 200 phones in villages with poor connectivity, which realistically takes a month to actually reach everyone.
+
+**Bugs surface early instead of late.** One piece of code running six times a season means a problem shows up in week one and gets fixed once. Six pieces of code used once each means the bug in the pre-harvest screen appears four months after launch, in the field, during harvest — the worst possible moment.
+
+**What I'm giving up:** More work upfront, and slower to a first demo. And a screen that has to serve six jobs is never perfect at any one of them — a purpose-built pest screen would be slightly better at being a pest screen. I'm accepting that.
+
+**How I'd explain it in the room:** *"The real question isn't how many screens, it's who can change the rules later — the office or only developers. With one screen reading a rules table, adding a seventh visit type is a row someone adds on a Tuesday afternoon. With six hard-built screens it's a development cycle plus an app update pushed to two hundred phones in villages with bad signal, which really takes a month to land. And the technician learns one thing instead of six, which matters when there's no training budget."*
 
 ---
 
@@ -296,6 +359,9 @@ Build: everything the technician touches, and every rule about what's acceptable
 **What I'm giving up:** We're dependent on someone else's pricing and someone else's uptime for the map layer, and switching later is painful. Worth it — building our own offline mapping would eat the first six months and we'd end up with a worse version of something that already exists.
 
 **Caveat I'd want to close:** if the company already has a mapping stack in place, this decision changes. I'd check that before spending a rupee.
+
+
+**How I'd explain it in the room:** *“Nobody pays us for having drawn a map. What's actually ours is knowing a sowing visit has to take under three minutes and that you never block a technician in a field — that came from understanding the field, and that's the product. And the argument that wins the room: crops don't wait. Buying puts us in a real field in three months, building puts us there in twelve. Miss the sowing window and you don't lose three months, you lose a year.”*
 
 ---
 
@@ -321,6 +387,9 @@ Under 5%, accept it — that's measurement noise. Between 5% and 20%, raise it f
 
 **What I'm giving up:** Those thresholds are guesses. 5% and 20% sound reasonable but I made them up. They need to be tuned against real captures, and I'd want to run the system in observe-only mode for a season before letting it hold anyone's fertiliser.
 
+
+**How I'd explain it in the room:** *“Both obvious answers fail. Automatic hands legally binding commercial authority to a GPS reading and an unsupervised person in a field. Reviewing everything creates three to four hundred tasks a month per technician's book, which gets rubber-stamped inside a fortnight — and a fake approval on the record is worse than no approval. Banding puts human attention only where real money is at risk, so the queue stays small enough that people actually read it.”*
+
 ---
 
 ### D10. Two technicians capture the same plot. What happens?
@@ -337,6 +406,9 @@ Under 5%, accept it — that's measurement noise. Between 5% and 20%, raise it f
 **Why:** Falls straight out of the rule in 1.1 — we never overwrite. The common shortcut is "whichever synced last wins," which quietly means "whoever got to WiFi first is right." That's not a rule, that's a coin toss with extra steps.
 
 **What I'm giving up:** A queue of conflicts someone has to work through. I'd expect it to be small, and I'd watch the number — if it's not small, the real problem is how work is being allocated, and the app has just made that visible, which is useful in itself.
+
+
+**How I'd explain it in the room:** *“You can't merge two shapes on a map. You'd get a third shape nobody walked. The usual shortcut is whoever synced last wins, which really means whoever reached WiFi first is right — that's not a rule, it's a coin toss with extra steps. Keep both, show a supervisor who captured what and how accurate each was, and let a person decide.”*
 
 ---
 
@@ -356,6 +428,9 @@ I want to be careful about tone here. The point isn't that technicians are disho
 - The farmer confirming on the spot (D5) — the strongest check by a distance
 
 **What I'm giving up:** None of it is airtight and I'm not trying to make it airtight. I'm trying to make faking harder than doing it properly. And I have to be careful how this gets presented internally, because building a surveillance tool for your own field staff is a good way to lose them.
+
+
+**How I'd explain it in the room:** *“The point isn't that technicians are dishonest. It's that if the honest path doesn't fit in the day, we've designed the shortcut ourselves — that's on the product, not on him. So make honest capture the fastest path, then add checks that cost him nothing: photos carry their own time and place, and a walked boundary has a rhythm that a finger drawing on glass doesn't. I'm not trying to make faking impossible, just harder than doing it properly.”*
 
 ---
 
@@ -385,6 +460,9 @@ Specifically what goes on the phone:
 
 **Numbers I've assumed and would check on day one:** how big the map pictures actually are for one village, how much free space is really on these phones, and what home internet speed looks like. If any of those are worse than I think, the buffer is the first thing to go.
 
+
+**How I'd explain it in the room:** *“At twenty to seven in the morning he wants to be on his bike, and a progress bar is something to skip. At nine at night he's at home with his phone charging and nothing to do. Same download, completely different chance of it actually happening. And if that download didn't happen, nothing else in the design matters — the entire offline day rests on it.”*
+
 ---
 
 ### D13. Is a Club a real thing in the system, or just a way of grouping farmers?
@@ -403,6 +481,9 @@ Specifically what goes on the phone:
 And it opens up things you can't do otherwise: this club has sown 80% of contracted area while that one has done 95% — go find out why. That's a genuinely useful thing for the business and it costs almost nothing extra if clubs are real records from day one.
 
 **What I'm giving up:** A bit more complexity in how data is organised, and I have to handle the messy cases — a farmer with plots in two villages, a farmer who moves clubs mid-season, a club that gets split.
+
+
+**How I'd explain it in the room:** *“The work is club-shaped, not farmer-shaped. Technicians visit clubs together, a club is fifteen to twenty-five farmers which is roughly a day, and the rhythm of the job is 'today I'm doing this club'. An app built around twenty unrelated farm visits that happen to be nearby is fighting how the job actually works. It costs almost nothing to make clubs real on day one, and retrofitting it later is painful.”*
 
 ---
 
@@ -504,6 +585,9 @@ Kept deliberately, because plain words are a choice, not a limitation.
 If a sentence in the submission can't be said out loud in a meeting without sounding rehearsed, it gets rewritten.
 
 ---
+
+**How I'd explain it in the room:** *“A small training budget isn't a constraint to work around, it's the design brief. If the app needs training, the app is wrong. He does this four hundred times a month — he'll learn it by repetition or not at all, and only if it's simple enough for that. And typing a note on a phone, in the sun, in a local language, with a farmer waiting, takes two minutes and will happen exactly once.”*
+
 ---
 
 # Part 7 — One more decision, about the submission itself
@@ -516,3 +600,5 @@ If a sentence in the submission can't be said out loud in a meeting without soun
 **Why this order:** the content is going to change a dozen times before it's right. Locking it into a slide deck early means every edit costs three times as much, and I'd start avoiding edits — which is how documents end up worse than they should be. So: one source, edited freely until it's finished, then packaged three ways at the end.
 
 **What I'm giving up:** the packaging work all lands at the end, in one block, which is where time pressure usually is. Worth it — I'd rather be under pressure to format than under pressure to think.
+
+**How I'd explain it in the room:** *“The content will change a dozen times before it's right. Lock it into slides early and every edit costs three times as much — and then I start avoiding edits, which is exactly how documents end up worse than they should be.”*
