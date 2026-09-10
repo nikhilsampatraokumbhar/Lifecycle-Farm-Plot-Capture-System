@@ -59,3 +59,11 @@ Same test as rule 1: if I would not type it into a document at work, it does not
 "Twenty to seven in the morning" is 6:40. "A fortnight" is two weeks. "Marking its own homework" is checking its own work.
 
 These slip in because they read nicely. They are also words I do not use, and one of them in an interview is enough to make the whole thing sound borrowed.
+
+## 9. The page limit is a maximum, not a target.
+
+Fifteen pages, every page 92% full, reads as "could not prioritise". It also argues against the brief's own scoring, which asks for conciseness in the same breath as clarity.
+
+So: cut the prose hard, keep every figure, every screen and every table that is already tight. **The figures and tables are the depth. Prose that re-explains a figure is the first thing to go.**
+
+The test for whether a paragraph stays: does it say something the picture next to it does not?

@@ -39,18 +39,18 @@ code{background:#EFEFEA;padding:1px 5px;border-radius:4px;font-size:.9em}
 
 @page{size:A4;margin:14mm 15mm}
 @media print{
-  body{background:#fff;font-size:9.8px;line-height:1.5}
+  body{background:#fff;font-size:10.2px;line-height:1.54}
   .sheet{max-width:none;margin:0;padding:0;min-height:0}
-  h1{font-size:20px;margin-bottom:4px}
-  h2{font-size:13.5px;margin:13px 0 6px;padding-top:7px;break-after:avoid;page-break-after:avoid}
-  h3{font-size:11px;margin:10px 0 4px;break-after:avoid;page-break-after:avoid}
-  p{margin:0 0 5.5px}
-  ul,ol{margin:0 0 6px;padding-left:14px} li{margin-bottom:2px}
+  h1{font-size:22px;margin-bottom:5px}
+  h2{font-size:14px;margin:15px 0 6.5px;padding-top:7.5px;break-after:avoid;page-break-after:avoid}
+  h3{font-size:12px;margin:12.5px 0 5.5px;break-after:avoid;page-break-after:avoid}
+  p{margin:0 0 7.6px}
+  ul,ol{margin:0 0 7px;padding-left:14px} li{margin-bottom:2.5px}
   hr{display:none}
-  table{font-size:8.7px;margin:5px 0 7px}
+  table{font-size:9.1px;margin:7px 0 10px}
   tr{break-inside:avoid;page-break-inside:avoid}
-  th{font-size:7.5px;padding:0 7px 3px 0} td{padding:3px 7px 3px 0}
-  blockquote{margin:7px 0;padding:7px 10px;break-inside:avoid}
+  th{font-size:7.9px;padding:0 7px 3.5px 0} td{padding:4px 7px 4px 0}
+  blockquote{margin:9px 0;padding:9px 12px;break-inside:avoid}
   .pagebreak{break-before:page;page-break-before:always}
 }
 
@@ -63,6 +63,6 @@ code{background:#EFEFEA;padding:1px 5px;border-radius:4px;font-size:.9em}
 .fig-t{font:700 13px/1 inherit;fill:var(--ink)}
 .fig.narrow svg{width:82%;margin:0 auto}
 @media print{
-  .fig{margin:6px 0 8px}
-  .fig figcaption{font-size:8.4px;margin-top:5px;padding-left:8px;line-height:1.45}
+  .fig{margin:8px 0 11px}
+  .fig figcaption{font-size:9.2px;margin-top:6px;padding-left:9px;line-height:1.5}
 }
