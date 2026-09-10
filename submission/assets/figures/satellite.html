@@ -1,0 +1,39 @@
+<figure class="fig">
+<svg viewBox="0 0 700 224" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif">
+ <text x="8" y="15" font-size="10.5" font-weight="700" fill="#9B211B" letter-spacing="1">CANNOT: FIND A BOUNDARY</text>
+ <text x="368" y="15" font-size="10.5" font-weight="700" fill="#0E6B3C" letter-spacing="1">CAN: TELL YOU WHEN THINGS STARTED GROWING</text>
+
+ <!-- left: pixel grid -->
+ <g>
+  <rect x="8" y="28" width="300" height="150" fill="#F2F1EC"/>
+  <g stroke="#C9CDC3" stroke-width="1">
+   <line x1="58" y1="28" x2="58" y2="178"/><line x1="108" y1="28" x2="108" y2="178"/>
+   <line x1="158" y1="28" x2="158" y2="178"/><line x1="208" y1="28" x2="208" y2="178"/>
+   <line x1="258" y1="28" x2="258" y2="178"/>
+   <line x1="8" y1="78" x2="308" y2="78"/><line x1="8" y1="128" x2="308" y2="128"/>
+  </g>
+  <polygon points="72,52 236,44 262,132 96,158" fill="rgba(14,107,60,.16)" stroke="#0E6B3C" stroke-width="2.2"/>
+  <text x="158" y="104" font-size="11.5" font-weight="700" text-anchor="middle" fill="#0A4F2C">a 0.5 acre plot</text>
+  <text x="8" y="196" font-size="11" fill="#4E544C">Each square is one pixel: <tspan font-weight="700">10 m by 10 m</tspan>.</text>
+  <text x="8" y="212" font-size="11" fill="#9B211B" font-weight="700">The edge is somewhere inside a pixel. You cannot see it.</text>
+ </g>
+
+ <!-- right: greenness curve -->
+ <g transform="translate(368,0)">
+  <rect x="0" y="28" width="324" height="150" fill="#FBFBF9" stroke="#E2E5DE"/>
+  <line x1="0" y1="178" x2="324" y2="178" stroke="#858B81" stroke-width="1.2"/>
+  <path d="M0,170 L54,169 L86,167 L118,160 L150,124 L190,74 L232,52 L280,58 L324,84"
+        fill="none" stroke="#0E6B3C" stroke-width="2.6"/>
+  <line x1="54" y1="34" x2="54" y2="178" stroke="#9B211B" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <line x1="140" y1="34" x2="140" y2="178" stroke="#8A5206" stroke-width="1.6" stroke-dasharray="4 3"/>
+  <rect x="54" y="34" width="86" height="144" fill="rgba(155,33,27,.07)"/>
+  <text x="58" y="48" font-size="10" font-weight="700" fill="#9B211B">recorded</text>
+  <text x="58" y="60" font-size="10" font-weight="700" fill="#9B211B">sown 14 Dec</text>
+  <text x="144" y="48" font-size="10" font-weight="700" fill="#8A5206">green only</text>
+  <text x="144" y="60" font-size="10" font-weight="700" fill="#8A5206">lifts late Jan</text>
+  <text x="0" y="196" font-size="11" fill="#4E544C">Greenness, week by week, inside the boundary.</text>
+  <text x="0" y="212" font-size="11" font-weight="700" fill="#8A5206">Six weeks late. Either the date is wrong or the crop failed.</text>
+ </g>
+</svg>
+<figcaption><b>Far too coarse to verify a boundary, and very good at timing.</b> It works better still across a whole club, where twenty plots become a few hundred pixels.</figcaption>
+</figure>

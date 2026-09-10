@@ -52,3 +52,15 @@ code{background:#EFEFEA;padding:1px 5px;border-radius:4px;font-size:.9em}
   blockquote{margin:7px 0;padding:7px 10px;break-inside:avoid}
   .pagebreak{break-before:page;page-break-before:always}
 }
+
+/* ---------- figures ---------- */
+.fig{margin:14px 0 18px;break-inside:avoid;page-break-inside:avoid}
+.fig svg{width:100%;height:auto;display:block}
+.fig figcaption{font-size:11.5px;line-height:1.5;color:var(--ink2);margin-top:7px;
+  padding-left:11px;border-left:2px solid var(--line2)}
+.fig figcaption b{color:var(--ink)}
+.fig-t{font:700 13px/1 inherit;fill:var(--ink)}
+@media print{
+  .fig{margin:6px 0 8px}
+  .fig figcaption{font-size:8.4px;margin-top:5px;padding-left:8px;line-height:1.45}
+}
