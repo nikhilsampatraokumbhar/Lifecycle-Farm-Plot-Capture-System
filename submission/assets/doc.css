@@ -60,6 +60,7 @@ code{background:#EFEFEA;padding:1px 5px;border-radius:4px;font-size:.9em}
   padding-left:11px;border-left:2px solid var(--line2)}
 .fig figcaption b{color:var(--ink)}
 .fig-t{font:700 13px/1 inherit;fill:var(--ink)}
+.fig.narrow svg{width:82%;margin:0 auto}
 @media print{
   .fig{margin:6px 0 8px}
   .fig figcaption{font-size:8.4px;margin-top:5px;padding-left:8px;line-height:1.45}

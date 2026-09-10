@@ -30,7 +30,7 @@ Measured, not estimated. `submission/build.py` reports real page counts.
 | A day with Ramesh (journey map) | 2 | **done** |
 | The screens (15, at 4 per page) | 4 | **done** |
 | How it works underneath (technical, 9 diagrams) | 5 | **done** |
-| What the data is good for | 1 | to write |
+| What the data is worth after the visit | 1 | **done** |
 | Plan, metrics, what we are not building | 1 | to write |
 | **Total** | **15** | at the limit |
 
