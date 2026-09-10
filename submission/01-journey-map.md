@@ -2,10 +2,6 @@
 
 ### Sowing visit — Bhagwati Club, Ambegaon village — 20 farmers, no signal all day
 
-> **DRAFT — not agreed.** This assumes decisions 1, 6, 7 and 8 from the decision log,
-> none of which are settled yet. If any of those change, this gets rewritten.
-> Treat it as a sample of the output, not as a position.
-
 *This is the journey the brief asks for. I've written it as one real day rather than as a diagram, because the interesting parts are the small frictions, and diagrams hide those.*
 
 ---

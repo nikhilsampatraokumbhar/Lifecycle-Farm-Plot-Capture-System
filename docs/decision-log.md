@@ -125,7 +125,9 @@ Two things I take from this:
 ## Group A — What we're actually optimising for
 
 ### D1. What's the one number we're trying to move?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Cut the gap between contracted and actual cultivated area from 15-25% to under 5%. Time per plot is the number that must not get worse.**
 
 **The question:** The brief lists four problems — area variance, settlement disputes, wrong input allocation, bad yield forecasts. I can't chase all four. Which one is the headline?
 
@@ -140,7 +142,9 @@ Two things I take from this:
 ---
 
 ### D2. Whose time do we protect?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: The technician's time wins, every time.**
 
 **The question:** The technician uses the app. The agri-company pays for it. When their interests pull apart — and they do, constantly, because the company always wants one more field, one more photo, one more confirmation — who wins?
 
@@ -157,7 +161,9 @@ I'd rather have five fields captured honestly than eight captured under pressure
 ## Group B — The field method
 
 ### D3. How do we actually capture the boundary?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Walk the boundary properly once at onboarding. After that, never re-walk — start from the saved boundary and only mark what changed.**
 
 **The question:** Six visits per farmer per season. What physically happens at each one?
 
@@ -192,7 +198,9 @@ Most flexible. But it hands a judgement call to someone the brief describes as h
 ---
 
 ### D4. What GPS accuracy is good enough — and what happens when it isn't?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Different accuracy standards per visit. Never block a capture — save it, mark it as weak, let the office check.**
 
 **The question:** A mid-range Android phone knows where it is to within about 3 to 10 metres on a good day. Under trees, near a wall, or on a cloudy morning, worse. What's acceptable?
 
@@ -216,7 +224,9 @@ Instead: save it, mark it clearly as low-accuracy, show him what's wrong in plai
 ---
 
 ### D5. Does the farmer confirm the boundary on the spot?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Yes. Farmer sees the shape and the number in his own language, signs on screen, photo of him at the plot.**
 
 **The question:** After the boundary is captured, does the farmer see it and agree to it before the technician leaves?
 
@@ -233,7 +243,9 @@ Sixty seconds of confirmation at capture time is the cheapest dispute prevention
 ## Group C — Scope
 
 ### D6. Which of the six stages ship first?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Build the machinery for all six stages, switch on three at launch — onboarding, sowing, post-harvest. The three where money moves.**
 
 **The question:** Build all six lifecycle stages for launch, or start narrower?
 
@@ -267,7 +279,9 @@ And it means the same code is used six times a season instead of six pieces of c
 ---
 
 ### D8. Are we building it or buying it?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Buy the map and the satellite imagery. Build the capture, the rules, the lifecycle history and the office side.**
 
 **The question:** Maps, offline map storage, satellite imagery, storing and comparing shapes — all of this can be bought off the shelf. What do we build ourselves?
 
@@ -288,7 +302,9 @@ Build: everything the technician touches, and every rule about what's acceptable
 ## Group D — Trust, conflict and authority
 
 ### D9. When the sown area doesn't match the contracted area, who decides what happens?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Banded. Under 5% passes. 5-20% goes to a supervisor with photos attached. Over 20%, or sown larger than contracted, freezes input release.**
 
 **The question:** Contract says 5 acres. Technician measures 3.8 acres sown. Now what? Does the contract change automatically?
 
@@ -308,7 +324,9 @@ Under 5%, accept it — that's measurement noise. Between 5% and 20%, raise it f
 ---
 
 ### D10. Two technicians capture the same plot. What happens?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Keep both captures. No automatic winner. A supervisor decides, with both technicians, times and accuracy shown.**
 
 **The question:** The brief tells us technicians often visit clubs together. So two people capturing the same farm on the same day is not an edge case, it's a Tuesday.
 
@@ -323,7 +341,9 @@ Under 5%, accept it — that's measurement noise. Between 5% and 20%, raise it f
 ---
 
 ### D11. Can a technician fake a capture from the office?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Make honest capture the fastest path, then add light checks that cost the technician nothing.**
 
 **The question:** How much do we design against someone gaming this?
 
@@ -342,7 +362,9 @@ I want to be careful about tone here. The point isn't that technicians are disho
 ## Group E — The practical stuff
 
 ### D12. What gets downloaded before a day with no signal?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Today's club plus tomorrow's, plus map pictures for that village only. Downloaded the night before, not in the morning.**
 
 **The question:** The technician syncs at home in the morning and then has no connectivity all day. What has to be on the phone?
 
@@ -366,7 +388,9 @@ Specifically what goes on the phone:
 ---
 
 ### D13. Is a Club a real thing in the system, or just a way of grouping farmers?
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: A real record, with its own history and its own numbers.**
 
 *(Plainly: does the system store a Club as its own record with its own history and its own numbers — or is "club" just a label on each farmer that you can filter a list by?)*
 
@@ -383,7 +407,9 @@ And it opens up things you can't do otherwise: this club has sown 80% of contrac
 ---
 
 ### D14. Language and training
-**Status: YOUR CALL — not decided yet**
+**Status: DECIDED**
+
+> **The call: Two languages at launch — one local, plus English for the office. Pictures before words, spoken notes instead of typed ones, no settings screen.**
 
 **The question:** The brief says basic smartphone literacy and limited training budget. What does that force?
 
@@ -476,3 +502,17 @@ Kept deliberately, because plain words are a choice, not a limitation.
 | Edge case | The unusual ones |
 
 If a sentence in the submission can't be said out loud in a meeting without sounding rehearsed, it gets rewritten.
+
+---
+---
+
+# Part 7 — One more decision, about the submission itself
+
+### D15. What form does the submission take?
+**Status: DECIDED**
+
+> **The call: build it as a PDF from source I can keep editing. At the very end, once the content is settled, also produce a slide version and an editable document version.**
+
+**Why this order:** the content is going to change a dozen times before it's right. Locking it into a slide deck early means every edit costs three times as much, and I'd start avoiding edits — which is how documents end up worse than they should be. So: one source, edited freely until it's finished, then packaged three ways at the end.
+
+**What I'm giving up:** the packaging work all lands at the end, in one block, which is where time pressure usually is. Worth it — I'd rather be under pressure to format than under pressure to think.
