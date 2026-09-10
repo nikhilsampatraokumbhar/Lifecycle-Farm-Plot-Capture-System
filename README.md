@@ -19,27 +19,28 @@ Take-home exercise. Senior Product Manager (Technical), AgriTech.
 
 All of it inside 15 pages, screens included.
 
-## Page budget
+## The submission
 
-Measured, not estimated. `submission/build.py` reports real page counts.
+`python3 submission/assemble.py` builds every section and merges them into
+`build/Lifecycle-Farm-Plot-Capture-Nikhil-Kumbhar.pdf`, reporting page counts as it goes.
 
-| Section | Pages | State |
+| Section | Pages | From |
 |---|---|---|
-| Cover, the short version, problem and principles | 1 | to write |
-| The six stages and what ships first | 1 | to write |
-| A day with Ramesh (journey map) | 2 | **done** |
-| The screens (15, at 4 per page) | 4 | **done** |
-| How it works underneath (technical, 9 diagrams) | 5 | **done** |
-| What the data is worth after the visit | 1 | **done** |
-| Plan, metrics, what we are not building | 1 | to write |
-| **Total** | **15** | at the limit |
+| Lifecycle Farm Plot Capture (summary, problem, the two ideas) | 1 | 1 |
+| The six stages, what ships first, the design rules, the constraints | 1 | 2 |
+| A day with Ramesh (journey map) | 2 | 3 |
+| The screens (15, four to a page) | 4 | 5 |
+| How it works underneath (technical, 9 diagrams) | 5 | 9 |
+| What the data is worth after the visit | 1 | 14 |
+| What I would build first, and what I would not build at all | 1 | 15 |
+| **Total** | **15** | |
 
-The technical section runs to 5 rather than 3 because it carries a diagram per point. That page came out of the journey map, which was 4 pages of flowing prose and is now 2 pages of timeline plus the six moments that matter. Tighter and better, not just shorter.
+Exactly the fifteen page limit. Every count is measured by the build, not estimated.
 
-## Building it
-
-`python3 submission/build.py <file.md> "<title>"` turns a section into HTML and a PDF in `build/`.
+`python3 submission/build.py <file.md> "<title>"` renders one section on its own while drafting.
 
 ## Where we are
 
-All fifteen decisions settled. Journey map, screens and technical write-up written. Still to do: the page on what the data is good for, and the front and back matter (summary, scope, metrics, what we are not building).
+All fifteen decisions settled and all seven sections written. The submission assembles to 15 pages.
+
+Still to do: produce the slide and document versions, per decision D15, now that the content is settled.
