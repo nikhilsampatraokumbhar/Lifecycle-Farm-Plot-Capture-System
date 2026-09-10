@@ -58,7 +58,7 @@ Anything that does not fit in the day does not get done, it gets faked, and a fa
 
 ## A note on the decisions
 
-This document is the answer. The choices behind it are recorded separately, in a companion decision log: fifteen decisions, the options weighed against each other, the call, and **what each one cost.** No decision is recorded without the thing it gave up, because a choice with no downside is not a choice, it is a preference.
+This document is the answer. The choices behind it are recorded separately, in a companion decision log: sixteen decisions, the options weighed against each other, the call, and **what each one cost.** No decision is recorded without the thing it gave up, because a choice with no downside is not a choice, it is a preference.
 
 Three of the fifteen, as a sample of the kind of call being made:
 

@@ -27,12 +27,11 @@ Those three also give the cleanest possible proof in a single season: contracted
 
 **Design for the boring answer.** Most farmers sow most of their field. That path is one tap and twenty-five seconds. Everything clever is for the five farmers a day who need it.
 
-**The plan is worth less than the ability to change it.** The order set the night before is wrong by four minutes after the technician reaches the village, so the route is a suggestion he can redo in thirty seconds, not an instruction.
+**The plan is worth less than the ability to change it.** The order set the night before is wrong four minutes after he reaches the village, so the route is a suggestion he can redo in thirty seconds.
 
 **Know where the app's authority stops.** It can measure a field. It cannot settle who owns it. Asking a technician to judge a boundary dispute between two neighbours is how you lose the technician.
 
 **Say it in his units.** Sixteen farmers left, about three hours. Not 80% complete. A percentage tells him nothing he can act on.
-
 
 ---
 
@@ -54,13 +53,15 @@ Listing them is easy. What matters is that each one changed something.
 
 ---
 
-## And what I still do not know
+## What I am deliberately not building
 
-Listed rather than guessed at. Each one could change a decision in here.
+Anything can be added to a product. Deciding what stays out is the harder half.
 
-1. What accuracy these phones actually reach in these villages. Every threshold rests on assumed numbers.
-2. How large the map files really are for one village, and how much free storage a technician's phone really has.
-3. How often the farmer is actually present when the technician arrives. If it is 40%, the signature step needs rethinking.
-4. Whether 5% and 20% are the right flag thresholds. I made them up. They need a season of real captures.
-5. What happens today when contracted and actual area disagree, and who currently decides. I would design around the existing process before proposing a new one.
-6. What a technician's day really looks like. My model comes from the brief's numbers, not from watching anyone. I would spend two days walking with one before locking any of this.
+| Not building | Why not |
+|---|---|
+| **External hardware: GPS units, drones** | They cost money, get lost, need charging, and need a person who now flies a drone instead of visiting farmers. Phone-only forces the design to be honest about accuracy rather than hiding behind hardware |
+| **Crop health analysis in the app** | Valuable, and the natural next thing, but a different product with a different team. The data model supports adding it later |
+| **A farmer-facing app** | Different user, literacy and phone. It would double the work and halve the focus |
+| **Live sync in the field** | There is no network there. Building for one is how you get an app that only works in the demo |
+| **Automatic contract amendment at launch** | The system should watch and flag for a season before it is allowed to move money |
+| **Every possible field shape** | Plots with holes, plots in two pieces, three crops on one: all real, all rarer than the basic case. v1 handles the common case and gives a clear way to say *this one is unusual, please look* |

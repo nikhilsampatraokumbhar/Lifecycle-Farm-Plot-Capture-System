@@ -22,7 +22,7 @@ Each one is written the same way. The question, the options I weighed, what I'd 
 ---
 ---
 
-# The fifteen calls, on one page
+# The sixteen calls, on one page
 
 *If I only get five minutes, this is the page.*
 
@@ -43,6 +43,7 @@ Each one is written the same way. The question, the options I weighed, what I'd 
 | **D13** | A Club is a real record with its own history, not a label on a farmer. | The work is club-shaped. An app built around scattered farm visits fights how the job works. |
 | **D14** | Two languages. Pictures before words. Spoken notes, never typed. No settings screen. | A small training budget isn't a constraint to work around, it's the design brief. |
 | **D15** | One editable source now. Package it as PDF, slides and a document only at the end. | Lock it into slides early and I start avoiding edits, which makes the document worse. |
+| **D16** | Pay a base on volume, but make the variable part depend on how the record was made, never on how clean it came back. | You cannot design around a pay slip. And paying for clean captures pays a man to hide problems. |
 
 **The two ideas underneath all fifteen:**
 
@@ -506,6 +507,44 @@ Which means, concretely:
 **Why:** The training budget being small isn't a constraint to work around, it's a design brief. If the app needs training, the app is wrong. Twenty farmers a day means the technician does this four hundred times a month. He'll learn it by repetition or not at all, and only if it's simple enough to learn by repetition.
 
 **What I'm giving up:** Icon-led design with few words means some things will be ambiguous the first time, and I'll only find out which ones by watching people. I'd want to sit with five technicians and a paper version before writing any code.
+
+---
+
+### D16. How field technicians get paid
+**Status: DECIDED**
+
+> **The call: pay a base on volume, because he still has to visit everyone, and make the variable part depend on how the record was made rather than on how accurate or how clean it turned out.**
+
+**The question:** this is the one that can undo everything else. Field technicians are usually paid on volume, farmers onboarded and visits closed. That quietly pays a man to go fast and guess, and no interface beats it, because the app is competing with his salary and the salary wins. **You cannot design around a pay slip.**
+
+**The two obvious fixes, and why both fail:**
+
+**Pay on accuracy.** Unmeasurable. We have no ground truth on most plots, and if we could verify every capture cheaply we would not need him in the first place.
+
+**Pay for clean captures, ones that come back with no flags raised.** Worse than doing nothing. It pays a man to hide problems. He stops reporting the pest damage, the overlap with his neighbour, the plot sown over contract, because each one costs him money. We would have built a careful evidence system and then paid people to withhold the evidence.
+
+**What I'd recommend instead:** pay on **how the record was made**, all of which is observable in the capture itself and none of which needs the true area.
+
+| What we pay on | What we never pay on |
+|---|---|
+| Share of captures walked rather than drawn by hand | Number of visits closed, on its own |
+| Farmer present at the plot, and he signed | Captures that came back with no flags |
+| Evidence complete wherever the app asked for it | How compliant his farmers turned out to be |
+| Accuracy inside the threshold for that stage | Speed |
+
+**Three things make it hold up.**
+
+**An unannounced supervisor re-walk on a random 3 to 5% of plots.** Without one independent measurement, every signal above is the phone marking its own homework. The sample does not need to be large, but it must be random, and he has to know it exists.
+
+**His score must never depend on his farmers' behaviour.** If a farmer sowed 60% because his borewell failed, that is not the technician's doing. Any measure that mixes the two pushes technicians towards easy farmers and easy villages, and the difficult villages are exactly where we need the data.
+
+**The score runs for a full season with no money attached to it.** You do not bolt pay onto a metric you have not watched. One season tells us whether it predicts anything real, and lets us find the ways it can be gamed before anyone's income depends on it.
+
+**Also worth saying: some of the strongest levers here are not money.** Seeing that his flags were acted on. Earning a status where his captures skip supervisor review. First claim on promotion to supervisor. Field staff notice being trusted at least as much as being paid.
+
+**What I'm giving up:** it is more complex to administer than paying per visit, and it needs the supervisor sample to be genuinely run rather than quietly skipped when everyone is busy. It also gives me a number I have to defend to finance in year one on faith, because the payback shows up in the input budget rather than in the technician's line.
+
+**How I'd explain it in the room:** *"You cannot design around a pay slip. If he is paid per visit closed, the fastest path is to guess, and the app is competing with his salary. But paying for accuracy does not work either, because we have no ground truth, and paying for clean captures is worse than doing nothing because it pays him to hide the pest damage. So we pay on how the record was made: walked rather than drawn, farmer present and signed, evidence complete, accuracy inside the threshold. All of it is visible in the capture, none of it needs the true area, and a random three percent supervisor re-walk keeps it honest. And we run it for a season with no money attached, because you do not bolt pay onto a metric you have not watched."*
 
 ---
 ---
