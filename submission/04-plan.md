@@ -8,7 +8,7 @@
 | **Season 2** | The other three stages switched on as settings. Flags start holding input release. Farmer compliance history begins | That multi-stage capture sharpens the forecast, and the flag queue can be worked without drowning anyone |
 | **Season 3** | The data products: claims evidence for insurers, standing-area feeds for procurement, plot-level traceability | That the record is worth something to people who were never going to visit a farm |
 
-**Season 1 deliberately does not let the system stop anything.** A system earns the right to hold up a farmer's fertiliser by first showing a season of numbers that were right.
+Season 1 deliberately does not let the system stop anything. A system earns the right to hold up a farmer's fertiliser by first showing a season of numbers that were right.
 
 ---
 
@@ -25,7 +25,7 @@
 | Captures synced within 24 hours | If this falls the evening sync is too painful, and needs fixing rather than enforcing |
 | Share of captures flagged low quality | Climbing means the thresholds are wrong, or something changed in the field |
 
-**And the one that tells the truth: are technicians still using it properly in month four?** Adoption at launch means nothing. Measured by time-per-plot and share walked rather than drawn, not by logins.
+And the one that tells the truth: are technicians still using it properly in **month four**? Adoption at launch means nothing. Measured by time-per-plot and share walked rather than drawn, not by logins.
 
 ---
 
@@ -33,13 +33,13 @@
 
 **You cannot design around a pay slip.** Technicians are usually paid on volume, which quietly pays a man to go fast and guess, and no interface beats that because the app is competing with his salary.
 
-**But the obvious fix is a trap.** Not accuracy directly, because there is no ground truth on most plots. And never clean data. Pay a bonus for captures that come back clean, and he will simply stop reporting the pest damage, the overlap, and the plot sown over contract. **We pay for a well-made record, not a convenient number.**
+But the obvious fix is a trap. Not accuracy directly, because there is no ground truth on most plots. And never clean data. Pay a bonus for captures that come back clean, and he will simply stop reporting the pest damage, the overlap, and the plot sown over contract. **We pay for a well-made record, not a convenient number.**
 
 {{fig:incentives}}
 
-**An unannounced supervisor re-walk on a random 3 to 5% of plots is the anchor**, because without one independent measurement every other signal is the phone checking its own work.
+An unannounced supervisor re-walk on a random 3 to 5% of plots is the anchor, because without one independent measurement every other signal is the phone checking its own work.
 
-**His score must never depend on his farmers' behaviour**, or he will avoid the difficult villages, which are where the data matters most. **And it runs for a full season with no money attached**, because you do not bolt pay onto a metric you have not watched.
+His score must never depend on his farmers' behaviour, or he will avoid the difficult villages, which are where the data matters most. And it runs for a full season with no money attached, because you do not bolt pay onto a metric you have not watched.
 
 ---
 

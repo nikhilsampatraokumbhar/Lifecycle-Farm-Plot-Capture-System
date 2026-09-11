@@ -18,7 +18,7 @@ At 6:40 he wants to be on his bike and would skip it. Because the whole day rest
 
 Two minutes with the club leader: three farmers have gone to the market, one has not sown, one has had a death in the family. He taps the three who are away and the order reshuffles. Thirty seconds.
 
-**I designed a clever route planner here and cut it.** The plan made at 9pm survives four minutes of contact with the village, so what he needs is not a better plan, it is one that is cheap to change.
+**I designed a clever route planner here and cut it.** The plan made at 9pm survives four minutes of contact with the village. What he needs is a plan that is cheap to change.
 
 ### 3 · 7:43 am. One question, usually one tap.
 
@@ -44,13 +44,13 @@ The gap is over 20%, so the app asks why. Six icons, one tap: **no water**. Two 
 
 Suresh sees his own field, the shape and the number, in Marathi. He signs with his finger. A photo of him at his plot.
 
-**Sixty seconds.** The dispute happens five months from now at settlement, when Suresh says that was never my land, and it is his word against a technician who has since visited four hundred farms. The quieter effect is bigger: **if the farmer is watching, the capture cannot be faked.**
+Sixty seconds buys this. The dispute happens five months from now at settlement, when Suresh says that was never my land, and it is his word against a technician who has since visited four hundred farms. The quieter effect is bigger: **if the farmer is watching, the capture cannot be faked.**
 
 Saved. **Total for a difficult farmer: 3 minutes 40 seconds.**
 
 ### 6 · 8:34 pm. Sending the day.
 
-Twenty captures, one tap. **Details go first, photos follow**, because if a record needed its photos to count, one weak connection would hold up all twenty. *18 sent. 2 waiting. Nothing is lost.*
+Twenty captures, one tap. Details go first and photos follow, because if a record needed its photos to count, one weak connection would hold up all twenty. *18 sent. 2 waiting. Nothing is lost.*
 
 Then: **3 need a note from you.** He writes them tonight, not next week, when the day has blurred into the other nineteen. And finally: *tomorrow is Shivneri Club. Download now?*
 
@@ -58,9 +58,9 @@ Then: **3 need a note from you.** He writes them tonight, not next week, when th
 
 ## Moving between twenty farmers
 
-**Saving a farmer opens the next one.** He never returns to a home screen. Twenty round trips through a menu is five minutes of the day spent navigating.
+Saving a farmer opens the next one, so he never returns to a home screen. Twenty round trips through a menu is five minutes of the day spent navigating.
 
-**Flagged farmers come early**, while there is still daylight and patience. **The day's common answer floats to the top of the picker**, because when the borewells fail they fail for the whole village. **Progress is counted in farmers and hours, never percentages.** And the day ends with one number he can report: *Bhagwati Club, 17 of 20 done, 81% of contracted area sown, 4 flagged.*
+Flagged farmers come early, while there is still daylight and patience. The day's common answer floats to the top of the picker, because when the borewells fail they fail for the whole village. Progress is counted in farmers and hours, never percentages. And the day ends with one number he can report: *Bhagwati Club, 17 of 20 done, 81% of contracted area sown, 4 flagged.*
 
 ---
 
@@ -83,8 +83,8 @@ Then: **3 need a note from you.** He writes them tonight, not next week, when th
 
 **The most important moment of a field day is not in the field.** It is the download the night before.
 
-**Design for the boring answer**, because most farmers sow most of their field.
+Design for the boring answer, because most farmers sow most of their field.
 
 **Never block him.** An app that says no, to a man alone in a field with thirteen farmers left, is an app that gets worked around. A worked-around app produces data that is confidently wrong, which is worse than no data.
 
-**Know where the app's authority ends.** It can measure a field. It cannot settle who owns it.
+And know where the app's authority ends. It can measure a field. It cannot settle who owns it.

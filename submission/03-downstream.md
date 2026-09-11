@@ -12,7 +12,7 @@ Seed and fertiliser go out against **contracted** area today, so when a farmer s
 
 ### Yield estimation
 
-Today the forecast is contracted area times expected yield, wrong from day one by the same 15 to 25% the brief opens with. With multi-stage capture it becomes area sown, adjusted at germination, reduced by pest damage, confirmed before harvest. **The value is not a better number, it is one that improves four times a season on a known schedule.**
+Today the forecast is contracted area times expected yield, wrong from day one by the same 15 to 25% the brief opens with. With multi-stage capture it becomes area sown, adjusted at germination, reduced by pest damage, confirmed before harvest. **The value is a number that improves four times a season on a known schedule**, which is worth more to procurement than one sharper guess in December.
 
 ### Insurance
 
@@ -32,6 +32,6 @@ Export buyers and certification schemes increasingly ask which plot a consignmen
 
 ### Club analytics
 
-Because a club is a real record, comparison costs nothing. One club at 95% of contracted area sown and its neighbour at 78% is worth a visit, and the answer is usually a borewell, a seed batch or a person. **It also points inward:** if one technician's clubs consistently read differently from everyone else's, that is a training or data quality problem, and there is no other way we would see it.
+Because a club is a real record, comparison costs nothing. One club at 95% of contracted area sown and its neighbour at 78% is worth a visit, and the answer is usually a borewell, a seed batch or a person. It also points inward: if one technician's clubs consistently read differently from everyone else's, that is a training or data quality problem, and there is no other way we would see it.
 
 **None of this needs a new visit, a new device, or one more minute in a field.**

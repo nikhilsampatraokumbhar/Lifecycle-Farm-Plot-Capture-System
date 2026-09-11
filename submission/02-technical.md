@@ -10,9 +10,9 @@
 
 {{fig:sync}}
 
-**On duplicates.** The common failure is not a lost record, it is one that arrived while the acknowledgement got lost coming back. The phone sends it again, so the server ignores an ID it has already seen.
+**On duplicates.** The common failure is a record that arrived safely while the acknowledgement got lost coming back. The phone sends it again, so the server ignores an ID it has already seen.
 
-**Two failures worth naming rather than hiding.** A lost phone before the evening sync loses that day's work, which is why the sync is a nightly habit with a prompt. And the phone's clock can be wrong with nothing offline to correct it, so every capture stores both the phone's time and the server's. A wrong clock corrupts a plot's whole history invisibly.
+**Two failures worth naming.** A lost phone before the evening sync loses that day's work, which is why the sync is a nightly habit with a prompt. And the phone's clock can be wrong with nothing offline to correct it, so every capture stores both the phone's time and the server's. A wrong clock corrupts a plot's whole history invisibly.
 
 ---
 
@@ -26,11 +26,11 @@ Today's club and tomorrow's: farmers, contracts, plots, every boundary and captu
 
 ## 3. When two technicians capture the same plot
 
-Technicians often visit clubs together, so this happens most weeks. **It is not a merging problem, and treating it as one is the mistake.** So: **keep both, pick neither, ask a person.** The usual shortcut, "whichever synced last wins", really means "whoever reached WiFi first is right".
+Technicians often visit clubs together, so this happens most weeks. Treating this as a merging problem is the mistake. So: **keep both, pick neither, ask a person.** The usual shortcut, "whichever synced last wins", really means "whoever reached WiFi first is right".
 
 {{fig:conflict}}
 
-**A second clash, easier to miss.** The office amends a contract while he is out of signal, so his "12% short" verdict may be wrong by the time it lands. Every capture records which contract version it was measured against, and a changed verdict goes to review rather than correcting itself quietly.
+**A second clash, easier to miss.** The office amends a contract while he is out of signal, so his "12% short" verdict may be wrong by the time it lands. Every capture records which contract version it was measured against, and a changed verdict goes to review instead of correcting itself quietly.
 
 ---
 
@@ -49,9 +49,9 @@ Real error is smaller than the band shown, because errors partly cancel, but the
 
 *Starting numbers, not settled ones. They need a season of real captures before anybody's payment depends on them.*
 
-**The accuracy figure alone is not enough, because it is only the phone's opinion of itself.** So we also check the walk: enough points, the loop closes, the shape does not cross itself, the time taken is believable. A five-acre plot "walked" in forty seconds was not walked.
+The accuracy figure alone is not enough, because it is only the phone's opinion of itself. So we also check the walk: enough points, the loop closes, the shape does not cross itself, the time taken is believable. A five-acre plot "walked" in forty seconds was not walked.
 
-**And the rule that overrides all of it: never block the capture.** Save it, mark it weak, let the office deal with it.
+And the rule that overrides all of it: **never block the capture.** Save it, mark it weak, let the office deal with it.
 
 ---
 
@@ -67,7 +67,7 @@ Real error is smaller than the band shown, because errors partly cancel, but the
 
 Being precise here is worth more than being enthusiastic, so it does three things: tells you **whether the field is a field**, which catches fabrication; tells you **when a crop actually started growing**, the strongest use by a distance; and shows **when part of a field is doing worse than the rest**, as supporting evidence rather than proof.
 
-**The limit that decides how we use it is cloud.** In monsoon you may get one usable picture in three weeks, so it never gates anything. It runs weekly on the server, produces a "worth a look" list, and never appears in the field app.
+The limit that decides how we use it is cloud. In monsoon you may get one usable picture in three weeks, so it never gates anything. It runs weekly on the server, produces a "worth a look" list, and never appears in the field app.
 
 ---
 
@@ -77,7 +77,7 @@ Being precise here is worth more than being enthusiastic, so it does three thing
 
 **The app never asks the technician which farmer is right.** That would make a man with a smartphone the judge of a land dispute between two people who will still be neighbours in twenty years. Knowing where the app's authority stops is a design decision, not an omission.
 
-**When an earlier capture turns out to be wrong, we do not fix it.** We add a correction beneath it. At settlement five months later an overwritten record proves nothing, while one with a dated correction proves everything.
+When an earlier capture turns out to be wrong, we do not fix it. We add a correction beneath it. At settlement five months later an overwritten record proves nothing, while one with a dated correction proves everything.
 
 ---
 

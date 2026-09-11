@@ -1,6 +1,6 @@
 ## The six stages
 
-A stage is not a feature. It is a set of rules the same capture screen reads: how accurate it must be, whether a photo is required, what it compares against, what it warns about. Adding a seventh stage is a row in a table, not a development project.
+A stage is just a set of rules that the same capture screen reads: how accurate it must be, whether a photo is required, what it compares against, what it warns about. Adding a seventh stage is a row in a table, not a development project.
 
 | Stage | What gets captured | The decision it feeds | v1 |
 |---|---|---|---|
@@ -15,7 +15,7 @@ A stage is not a feature. It is a set of rules the same capture screen reads: ho
 
 **Onboarding, sowing and post-harvest are the three where money changes hands.** The other three drive forecasting, but nobody's payment is blocked on them. Those three also give the cleanest proof in one season: contracted area at the start, actual area at the end, and the gap between them measured properly for the first time.
 
-**The machinery is built for all six from day one**, so the rest are switched on as settings rather than shipped as new software. That matters when an app update has to reach two hundred phones in villages with poor signal.
+**The machinery is built for all six from day one**, so the rest are switched on as settings, not shipped as new software. That matters when an app update has to reach two hundred phones in villages with poor signal.
 
 ## The constraints, and what each one changed
 

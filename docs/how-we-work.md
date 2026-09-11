@@ -67,3 +67,15 @@ Fifteen pages, every page 92% full, reads as "could not prioritise". It also arg
 So: cut the prose hard, keep every figure, every screen and every table that is already tight. **The figures and tables are the depth. Prose that re-explains a figure is the first thing to go.**
 
 The test for whether a paragraph stays: does it say something the picture next to it does not?
+
+## 10. Do not let it read as machine-written.
+
+Beyond jargon and em dashes, three habits give it away, and a recruiter who reads a lot of submissions spots them before they read the argument.
+
+**Bolding the opening sentence of every paragraph.** People bold two or three things in a document, to mark what matters. Bolding 43% of paragraph openings is a formatting reflex, not emphasis. Labels heading a list item are fine. A full sentence in bold just because it starts a paragraph is not.
+
+**The "X is not A, it is B" construction.** Once, it lands. Seven times across fourteen pages and it becomes a rhythm the reader starts hearing. Keep the one or two that carry a real idea and rewrite the rest as plain statements.
+
+**Uniform sentence length.** Machine text drifts toward the same medium length. Real writing has four-word sentences next to thirty-word ones.
+
+The check: read a page aloud. If the shape of every paragraph is the same, it will read as generated no matter how good the thinking is.
